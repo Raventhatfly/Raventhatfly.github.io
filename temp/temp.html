@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wfy Web</title>
+    <style>
+        div button {
+            width: 80px;
+            height: 40px;
+        }
+    </style>
     <script>
-        var a;
-        var b;
-        var sum;
-        console.log("good");
+        var button = document.getElementById('myButton');
+        // var heading = document.getElementById('myHeading');
+        // 添加点击事件监听器
+        button.addEventListener('click', function() {
+            // 在按钮点击时修改标题内容
+            console.alert("hello");
+        });
     </script>
 </head>
 <body>
@@ -17,4 +26,5 @@
         Please enter the second number: <input type="number">
         This is the sum: <input type="number">
     </div>
+    <div><button id="myButton">Calculate</button></div>
 </body>

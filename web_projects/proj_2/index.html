@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <div id="time">-->
+<!--        2024-1-5-->
+<!--        <ul>-->
+<!--            <li>aa </li>-->
+<!--            <li>aa </li>-->
+<!--            <li>aa </li>-->
+<!--            <li>aa </li>-->
+<!--            <li>aa </li>-->
+<!--        </ul>-->
+
+<!--    </div>-->
+    <div>某个时间</div>
+    <button id="btn">Hello</button>
+    <p></p>
+    <script>
+        var btn = document.getElementById('btn')
+        var div = document.querySelector('div')
+        btn.onclick =  function(){
+            div.innerText=getDate()
+        }
+
+        function getDate(){
+            var date = new Date()
+            var year = date.getFullYear()
+            var month = date.getMonth() + 1
+            var dates = date.getDate()
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+            var day = date.getDay()
+            var hour = date.getHours()
+            var min = date.getMinutes()
+            var sec = date.getSeconds()
+
+            return '今天是' + year + '年' + month + '月' + dates + '日'+ arr[day] + hour + '时' + min +  '分' + sec + '秒'
+
+        }
+        // var p = document.querySelector('p')
+        // p.innerText = getDate()
+    </script>
+</body>
+</html>
+
+<!--Let's put the rubbish here-->
+<!--// var time = document.getElementById('time')-->
+<!--// console.log(time)-->
+<!--// console.log(typeof time)-->
+<!--// // 打印元素对象-->
+<!--// console.dir(time)-->
+<!--// // 获取对象的集合，尾数组形式存储-->
+<!--// var lis = document.getElementsByTagName('li')-->
+<!--// console.log(lis)-->
+<!--// console.log(lis[0])-->
+<!--// for(var i = 0; i < lis.length; i++){-->
+<!--//     console.log(lis[i])-->
+<!--// }-->
