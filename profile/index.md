@@ -63,7 +63,7 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 [//]: # ({.text-primary})
 
 [//]: # ()
-[//]: # (去露营啦！:&amp;#40;fa-solid fa-campground fa-fw&amp;#41;: 很快就回来。)
+去露营啦！:(fa-solid fa-campground fa-fw): 很快就回来。
 
 [//]: # ()
 [//]: # (oh no )
