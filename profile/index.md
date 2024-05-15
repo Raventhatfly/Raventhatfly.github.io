@@ -5,6 +5,9 @@
 
 ![](/avatar_img/avatar300.jpg)
 {.custom_avatar}
+
+Welcome to my personal website!
+
 My name is Feiyang Wu, currently a junior student majoring in Computer
 Engineering of ZJU-UIUC institude of Zhejiang University (China). I am also 
 purchasing my second degree of University of Illinois Urbana Champaign (USA).
@@ -24,51 +27,30 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 * x86 Assembly and Operating System Programming
 * Robotics Control and Programming
 * Front End Development
-* Artificial Intelligence and its application to Computer Vision
+* Machine Learning
+* Computer Vision
+* FPGA and Hardware Description Language 
+
+# Projects Participated
+* Captain of ZJU-UIUC insitute RoboMaster Meta Robotics Team &amp; leader of embedded-team
+  (2022-2023), real time embedded system design
+* Course Project ECE391, RazelOS, a simple Unix-like Operating System
+* Course Project ECE385, Xilinx Spartan-7 FPGA based Plants vs. Zombie Game
+* Data Collection and Labelling for CVPR2024 accepted paper:  [Moviechat-1k dataset](https://huggingface.co/datasets/Enxin/MovieChat-1K_train)
 
 # Awards and Papers
 * 2021-2022 and 2022-2023 National Scholarship (国家奖学金)
 * 2021-2022 and 2022-2023, First Prize Scholarship of Zhejiang University (浙江大学一等奖学金)
 * 2021-2022 and 2022-2023, Second Prize Shcolarship of ZJU-UIUC institute (ZJUI联合学院二等奖学金)
 * 2023 RoboMaster University League (Shanghai Station) Second Prize (2023机甲大师高校联盟赛上海站二等奖)
-* Co-author of CVPR2024 accepted paper MovieChat: From Dense Token to Sparse Memory for Long Video Understanding, with the role of data collection and labeling.
+* Co-author of CVPR2024 accepted paper _MovieChat: From Dense Token to Sparse Memory for Long Video Understanding_, with the role of data collection and labeling.
 [View Paper](https://arxiv.org/abs/2307.16449)
 ---
 {.awesome-hr}
 
 
 
-[//]: # (bar)
 
-[//]: # ({#test-id .text-danger})
-
-[//]: # (* 水果)
-
-[//]: # (    * 苹果)
-
-[//]: # (    * 橙子)
-
-[//]: # (    * 香蕉)
-
-[//]: # (    {.text-success})
-
-[//]: # (* 乳制品)
-
-[//]: # (    * 牛奶)
-
-[//]: # (    * 奶酪)
-
-[//]: # (    {.text-warning})
-
-[//]: # ({.text-primary})
-
-[//]: # ()
-去露营啦！:(fa-solid fa-campground fa-fw): 很快就回来。
-
-[//]: # ()
-[//]: # (oh no )
-
-[//]: # ({.custom-right})
 
 
 

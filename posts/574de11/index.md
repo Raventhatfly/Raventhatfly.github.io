@@ -2,11 +2,11 @@
 
 ## META 战队电控培训【第一讲】讲义
 ### 1. 预习内容
-C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：https://code.visualstudio.com/）
+C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：[https://code.visualstudio.com/](https://code.visualstudio.com/)。
 
 第一讲大家请自行学习P1~P24有关章节的知识。
 
-黑马程序员课程链接：https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177
+黑马程序员课程链接点击[此处](https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177)。
 ### 2. Linux基本操作
 
 ##### (a) 终端
@@ -32,10 +32,10 @@ options 选项：定义命令的执行特性，中刮号[]并不存在于实际�
 
 arguments 参数：表示命令的作用对象，可以有多个参数，通常情况可以是文件名、目录、或用户名。
 
-来源：https://zhuanlan.zhihu.com/p/33331219
+来源：[https://zhuanlan.zhihu.com/p/33331219](https://zhuanlan.zhihu.com/p/33331219)
 
 ### 3. 环境变量和MinGW编译器安装
-（Mac和Linux用户可忽略此步，因为Mac和Linux自带gcc编译器）
+
 
 ##### (a)环境变量
 环境变量（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数，如：临时文件夹位置和系统文件夹位置等。
@@ -45,35 +45,48 @@ arguments 参数：表示命令的作用对象，可以有多个参数，通常�
 比如，现在打开windows终端，输入gcc, 按下回车，只会出现报错信息。但是当我将gcc.exe所在的文件夹加入环境变量之后，输入gcc之后终端就能运行gcc这个二进制可执行文件命令。
 
 ##### (b)MinGW编译器安装
+（Mac和Linux用户可忽略此步，因为Mac和Linux自带gcc编译器）
+
 接下来是windows MinGW编译器安装方法：
-下载：https://sourceforge.net/projects/mingw/files/latest/download
+下载：[https://sourceforge.net/projects/mingw/files/latest/download](https://sourceforge.net/projects/mingw/files/latest/download)
+
 安装完成之后，找到安装位置，我们发现里面有一个bin文件夹：
 
 ![图片](/figures/bin.png)
+{.custom-center}
 
-来源：https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949
+来源：[https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949](https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949)
 
 在windows上搜索环境变量，打开后，点击环境变量：
 
 ![环境变量](/figures/环境变量.png)
+{.custom-center}
 
 点击环境变量中的Path:
 
 ![path](/figures/path.png)
+{.custom-center}
 
 点击新建，把刚才MinGW那个带bin的路径给输入进来：
 
 ![bin](/figures/bin2.png)
+{.custom-center}
 
-###### 注意：退出的时候两个窗口都要点击确定！不要直接把窗口叉掉！
+{{&lt; admonition type=tip title=&#34;注意&#34; open=true &gt;}}
+退出的时候所有窗口都要点击确定！不要直接把窗口叉掉！
+{{&lt; /admonition &gt;}}
+
 
 bin是binary的缩写，也就是二进制文件。bin文件夹中包含我们将用到的大部分可执行二进制文件，包括gcc。现在这些可执行文件都能被终端找到了。
+如果打开bin文件夹，可以找到以下的exe文件，现在这些.exe可执行文件都可以被终端直接执行。
 
 ![bin](/figures/bin3.png)
+{.custom-center}
 
 Win&#43;R 输入powershell打开终端，输入gcc得到一下结果：
 
 ![bin](/figures/gcc-out.png)
+{.custom-center}
 
 证明结果正确（fatal error的原因只是因为没有待编译的c文件输入而已）。
 
@@ -84,7 +97,9 @@ Win&#43;R 输入powershell打开终端，输入gcc得到一下结果：
 Mac\Linux用户请输入：
 `gcc prime.c -o prime`
 prime.c是告诉gcc我想编译哪个文件，-o指的是输出文件名。
+
 ![bin](/figures/teach1.png)
+{.custom-center}
 
 之后文件夹中会多出一个叫prime.exe的二进制可执行文件。
 Windows运行该可执行文件只需输入：
@@ -94,10 +109,19 @@ Mac\Linux请输入：
 可执行文件即可被执行完成。由于prime.c的功能是输出1~100中所有的质数，被打印的质数将会在终端中显示。
 
 ![bin](/figures/prime.png)
+{.custom-center}
 
 ### 4.  UIUC VPN安装
-由于我们将用github管理仓库，而国内连接github并不稳定，请大家尽快安装UIUC　VPN。
+由于我们将用github管理仓库，而国内连接github并不稳定，请大家尽快安装UIUC VPN。请根据自己的电脑
+配置和操作系统选择合适的链接安装。
+VPN下载：[https://answers.uillinois.edu/illinois/98773](https://answers.uillinois.edu/illinois/98773)
 
+安装完成之后输入：
+
+![](/figures/vpn1.png)
+{.custom-center}
+
+输入NetID和密码之后，切记选择通道3，否则无法正常访问外网。
 ### 5. C语言基础语法
 自行查阅预习内容。应掌握的内容为：P1-P24
 应掌握的概念：注释、常量、关键字、变量、字符类型、标识符、数据类型、if语句

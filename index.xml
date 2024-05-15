@@ -1,4 +1,249 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/</link><description>Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Tue, 14 May 2024 14:17:45 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Lecture1</title><link>https://Raventhatfly.github.io/posts/574de11/</link><pubDate>Sun, 12 May 2024 23:10:35 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/574de11/</guid><description><![CDATA[<h2 id="meta-战队电控培训第一讲讲义" class="heading-element"><span>META 战队电控培训【第一讲】讲义</span>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/</link><description>Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Tue, 14 May 2024 20:58:28 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>网站维护</title><link>https://Raventhatfly.github.io/posts/b7b4b1f/</link><pubDate>Tue, 14 May 2024 20:58:28 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/b7b4b1f/</guid><description><![CDATA[<h2 id="1-如何发布一篇新的帖子" class="heading-element"><span>1. 如何发布一篇新的帖子</span>
+  <a href="#1-%e5%a6%82%e4%bd%95%e5%8f%91%e5%b8%83%e4%b8%80%e7%af%87%e6%96%b0%e7%9a%84%e5%b8%96%e5%ad%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>以要新发布一篇名为maintain.md的帖子为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new content /posts/maintain.md</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该文件会被加入<code>content/posts</code>文件夹中。新的网页文件会被渲染。</p>
+<p>通过修改参数可以更改网页配置，具体信息查阅FixIt文档。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: 网站维护
+</span></span><span class="line"><span class="cl">subtitle: 介绍维护该网站的常用方法
+</span></span><span class="line"><span class="cl">date: 2024-05-14T20:58:28-05:00
+</span></span><span class="line"><span class="cl">slug: b7b4b1f
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">author:
+</span></span><span class="line"><span class="cl">name: Feiyang Wu
+</span></span><span class="line"><span class="cl">link:
+</span></span><span class="line"><span class="cl">email:
+</span></span><span class="line"><span class="cl">avatar: /avatar_img/avatar.jpg
+</span></span><span class="line"><span class="cl">description:
+</span></span><span class="line"><span class="cl">keywords:
+</span></span><span class="line"><span class="cl">license:
+</span></span><span class="line"><span class="cl">comment: false
+</span></span><span class="line"><span class="cl">weight: 0
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 网站维护
+</span></span><span class="line"><span class="cl">categories:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 网站维护
+</span></span><span class="line"><span class="cl">hiddenFromHomePage: false
+</span></span><span class="line"><span class="cl">hiddenFromSearch: false
+</span></span><span class="line"><span class="cl">hiddenFromRss: false
+</span></span><span class="line"><span class="cl">hiddenFromRelated: false
+</span></span><span class="line"><span class="cl">summary:
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> name: featured-image
+</span></span><span class="line"><span class="cl">src: featured-image.jpg
+</span></span><span class="line"><span class="cl"><span class="k">-</span> name: featured-image-preview
+</span></span><span class="line"><span class="cl">src: featured-image-preview.jpg
+</span></span><span class="line"><span class="cl">toc: true
+</span></span><span class="line"><span class="cl">math: false
+</span></span><span class="line"><span class="cl">lightgallery: false
+</span></span><span class="line"><span class="cl">password:
+</span></span><span class="line"><span class="cl">message:
+</span></span><span class="line"><span class="cl">repost:
+</span></span><span class="line"><span class="cl">enable: true
+</span></span><span class="line"><span class="cl">url:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>---</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以上是本页面的配置信息。如果要渲染该页面，需要将<code>draft</code>值从默认的<code>true</code>改为<code>false</code>。</p>
+<h2 id="2-添加菜单内容" class="heading-element"><span>2. 添加菜单内容</span>
+  <a href="#2-%e6%b7%bb%e5%8a%a0%e8%8f%9c%e5%8d%95%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>找到hugo设置文件<code>hugo.toml</code>，加入菜单设置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># you can add extra information before the name (HTML format is supported), such as icons</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># you can add extra information after the name (HTML format is supported), such as icons</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Archives&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/archives/&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># title will be shown when you hover on this menu link</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># FixIt 0.2.14 | NEW add user-defined content to menu items</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># add css class to a specific menu item</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">class</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># whether set as a draft menu item whose function is similar to a draft post/page</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">draft</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;fa-solid fa-archive&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># FixIt 0.2.16 | NEW set menu item type, optional values: [&#34;mobile&#34;, &#34;desktop&#34;]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>具体用法详见FixIt文档。</p>
+<h2 id="3-添加静态页面" class="heading-element"><span>3. 添加静态页面</span>
+  <a href="#3-%e6%b7%bb%e5%8a%a0%e9%9d%99%e6%80%81%e9%a1%b5%e9%9d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>做法类似添加一个新帖子。直接将markdowm文件加入<code>content</code>文件夹即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new content mian.md</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果该页面无法通过菜单直接找到，可以在markdown最开始的配置区域加上url，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title = &#39;RoboMaster Meta战队&#39;
+</span></span><span class="line"><span class="cl">subtitle = &#39;2024电控教学主页&#39;
+</span></span><span class="line"><span class="cl">date = 2024-05-14T14:17:45-05:00
+</span></span><span class="line"><span class="cl">draft = false
+</span></span><span class="line"><span class="cl">url = &#39;/meta-teaching/main&#39;
+</span></span><span class="line"><span class="cl">+++</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该静态页面就会显示在网站/meta-teaching/main页面。</p>
+<h2 id="4-添加图片和资源" class="heading-element"><span>4. 添加图片和资源</span>
+  <a href="#4-%e6%b7%bb%e5%8a%a0%e5%9b%be%e7%89%87%e5%92%8c%e8%b5%84%e6%ba%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>将所有的图片和资源放入<code>assets</code>文件夹。资源和文件将以该文件夹为根目录进行寻址。</p>
+<h2 id="5-更多其他功能" class="heading-element"><span>5. 更多其他功能</span>
+  <a href="#5-%e6%9b%b4%e5%a4%9a%e5%85%b6%e4%bb%96%e5%8a%9f%e8%83%bd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>更多其他功能请查阅FixIt文档。本文档仅介绍基础维护方法。</p>
+<hr class="awesome-hr">]]></description></item><item><title>Hugo Setup</title><link>https://Raventhatfly.github.io/posts/c9bea25/</link><pubDate>Tue, 14 May 2024 19:25:05 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/c9bea25/</guid><description><![CDATA[<h1 id="本网站基于hugo和githubio的建立教程" class="heading-element"><span>本网站基于HUGO和github.io的建立教程</span>
+  <a href="#%e6%9c%ac%e7%bd%91%e7%ab%99%e5%9f%ba%e4%ba%8ehugo%e5%92%8cgithubio%e7%9a%84%e5%bb%ba%e7%ab%8b%e6%95%99%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>2024年5月的某一天，我和倪驰明讨论为我们在2024年下半年建立网站方便教学的有关事宜。
+一开始我本来想自己手写html，但是倪驰明说，为什么不用hugo呢？</p>
+<p>Hugo 是一个流行的静态网站生成器（Static Site Generator，SSG），它允许用户从简单的文本文件（如 Markdown 文件）
+生成完整的静态网站，因此我们可以通过编写markdown快速部署网页而无需大量编写html。</p>
+<p>从2024年5月12日开始，我致力于使用Hugo开发这个网站。由于我计划将这个网站部署到github.io，因此
+我将同时通过这个架构来开发自己的个人主页。</p>
+<h2 id="1-下载安装hugo" class="heading-element"><span>1. 下载安装Hugo</span>
+  <a href="#1-%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85hugo" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>首先进入官网，找到<a href="https://gohugo.io/installation/windows/"target="_blank" rel="external nofollow noopener noreferrer">安装</a>页面。根据官网的指示进行安装。
+我的开发平台是Windows，其包管理工具没有像Linux和MacOS那么方便。那么我们可以直接找到<a href="https://github.com/gohugoio/hugo/releases/tag/v0.126.0"target="_blank" rel="external nofollow noopener noreferrer">Prebuilt
+Binaries</a>，由于我的电脑是AMD芯片，因此我选择hugo_extended_0.125.7_windows-amd64的版本进行
+下载，解压，并安装。安装完成之后，将hugo所在的文件夹添加到Path环境变量。终端输入<code>hugo version</code>
+，成功打印版本号，证明安装成功。</p>
+<h2 id="2-选择心仪的hugo主题" class="heading-element"><span>2. 选择心仪的Hugo主题</span>
+  <a href="#2-%e9%80%89%e6%8b%a9%e5%bf%83%e4%bb%aa%e7%9a%84hugo%e4%b8%bb%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们可以到<a href="https://themes.gohugo.io/"target="_blank" rel="external nofollow noopener noreferrer">Hugo主题页面</a>选择合适的主题。我最终挑选FixIt作为我的网站主题。
+选择到合适的主题后即可根据Hugo官方教程或<a href="https://fixit.lruihao.cn/documentation/getting-started/quick-start/"target="_blank" rel="external nofollow noopener noreferrer">FixIt官方教程</a>进行安装。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site mySite
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> mySite
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完成之后运行Hugo Server即可在localhost:1313测试网站。</p>
+<h2 id="3-github-网站发布" class="heading-element"><span>3. Github 网站发布</span>
+  <a href="#3-github-%e7%bd%91%e7%ab%99%e5%8f%91%e5%b8%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>参考了<a href="https://simumis.com/posts/deploy-to-github/#5%E5%8F%91%E5%B8%83%E7%BD%91%E7%AB%99"target="_blank" rel="external nofollow noopener noreferrer">博客文章</a>。</p>]]></description></item><item><title>Lecture1</title><link>https://Raventhatfly.github.io/posts/574de11/</link><pubDate>Sun, 12 May 2024 23:10:35 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/574de11/</guid><description><![CDATA[<h2 id="meta-战队电控培训第一讲讲义" class="heading-element"><span>META 战队电控培训【第一讲】讲义</span>
   <a href="#meta-%e6%88%98%e9%98%9f%e7%94%b5%e6%8e%a7%e5%9f%b9%e8%ae%ad%e7%ac%ac%e4%b8%80%e8%ae%b2%e8%ae%b2%e4%b9%89" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -6,9 +251,9 @@
   <a href="#1-%e9%a2%84%e4%b9%a0%e5%86%85%e5%ae%b9" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：https://code.visualstudio.com/）</p>
+</h3><p>C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：<a href="https://code.visualstudio.com/"target="_blank" rel="external nofollow noopener noreferrer">https://code.visualstudio.com/</a>。</p>
 <p>第一讲大家请自行学习P1~P24有关章节的知识。</p>
-<p>黑马程序员课程链接：https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177</p>
+<p>黑马程序员课程链接点击<a href="https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177"target="_blank" rel="external nofollow noopener noreferrer">此处</a>。</p>
 <h3 id="2-linux基本操作" class="heading-element"><span>2. Linux基本操作</span>
   <a href="#2-linux%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
@@ -33,13 +278,12 @@ Linux指令语法结构：
 <p>多个短选项可以组合使用，效果和几个短选项一样，如-a –l -h===-alh</p>
 <p>长选项：用&ndash;引导，后面跟完整的单词，如—help</p>
 <p>arguments 参数：表示命令的作用对象，可以有多个参数，通常情况可以是文件名、目录、或用户名。</p>
-<p>来源：https://zhuanlan.zhihu.com/p/33331219</p>
+<p>来源：<a href="https://zhuanlan.zhihu.com/p/33331219"target="_blank" rel="external nofollow noopener noreferrer">https://zhuanlan.zhihu.com/p/33331219</a></p>
 <h3 id="3-环境变量和mingw编译器安装" class="heading-element"><span>3. 环境变量和MinGW编译器安装</span>
   <a href="#3-%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e5%92%8cmingw%e7%bc%96%e8%af%91%e5%99%a8%e5%ae%89%e8%a3%85" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>（Mac和Linux用户可忽略此步，因为Mac和Linux自带gcc编译器）</p>
-<h5 id="a环境变量" class="heading-element"><span>(a)环境变量</span>
+</h3><h5 id="a环境变量" class="heading-element"><span>(a)环境变量</span>
   <a href="#a%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -50,25 +294,31 @@ Linux指令语法结构：
   <a href="#bmingw%e7%bc%96%e8%af%91%e5%99%a8%e5%ae%89%e8%a3%85" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h5><p>接下来是windows MinGW编译器安装方法：
-下载：https://sourceforge.net/projects/mingw/files/latest/download
-安装完成之后，找到安装位置，我们发现里面有一个bin文件夹：</p>
-<p><img loading="lazy" src="/figures/bin.png" alt="图片" srcset="/figures/bin.png?size=small, /figures/bin.png?size=medium 1.5x, /figures/bin.png?size=large 2x" data-title="图片" style="--width: 1156px;--aspect-ratio: 1156 / 613;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
-<p>来源：https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949</p>
+</h5><p>（Mac和Linux用户可忽略此步，因为Mac和Linux自带gcc编译器）</p>
+<p>接下来是windows MinGW编译器安装方法：
+下载：<a href="https://sourceforge.net/projects/mingw/files/latest/download"target="_blank" rel="external nofollow noopener noreferrer">https://sourceforge.net/projects/mingw/files/latest/download</a></p>
+<p>安装完成之后，找到安装位置，我们发现里面有一个bin文件夹：</p>
+<p class="custom-center"><img loading="lazy" src="/figures/bin.png" alt="图片" srcset="/figures/bin.png?size=small, /figures/bin.png?size=medium 1.5x, /figures/bin.png?size=large 2x" data-title="图片" style="--width: 1156px;--aspect-ratio: 1156 / 613;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>来源：<a href="https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949"target="_blank" rel="external nofollow noopener noreferrer">https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949</a></p>
 <p>在windows上搜索环境变量，打开后，点击环境变量：</p>
-<p><img loading="lazy" src="/figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" alt="环境变量" srcset="/figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=small, /figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=medium 1.5x, /figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=large 2x" data-title="环境变量" style="--width: 741px;--aspect-ratio: 741 / 829;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p class="custom-center"><img loading="lazy" src="/figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" alt="环境变量" srcset="/figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=small, /figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=medium 1.5x, /figures/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png?size=large 2x" data-title="环境变量" style="--width: 741px;--aspect-ratio: 741 / 829;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>点击环境变量中的Path:</p>
-<p><img loading="lazy" src="/figures/path.png" alt="path" srcset="/figures/path.png?size=small, /figures/path.png?size=medium 1.5x, /figures/path.png?size=large 2x" data-title="path" style="--width: 942px;--aspect-ratio: 942 / 907;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p class="custom-center"><img loading="lazy" src="/figures/path.png" alt="path" srcset="/figures/path.png?size=small, /figures/path.png?size=medium 1.5x, /figures/path.png?size=large 2x" data-title="path" style="--width: 942px;--aspect-ratio: 942 / 907;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>点击新建，把刚才MinGW那个带bin的路径给输入进来：</p>
-<p><img loading="lazy" src="/figures/bin2.png" alt="bin" srcset="/figures/bin2.png?size=small, /figures/bin2.png?size=medium 1.5x, /figures/bin2.png?size=large 2x" data-title="bin" style="--width: 817px;--aspect-ratio: 817 / 787;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
-<h6 id="注意退出的时候两个窗口都要点击确定不要直接把窗口叉掉" class="heading-element"><span>注意：退出的时候两个窗口都要点击确定！不要直接把窗口叉掉！</span>
-  <a href="#%e6%b3%a8%e6%84%8f%e9%80%80%e5%87%ba%e7%9a%84%e6%97%b6%e5%80%99%e4%b8%a4%e4%b8%aa%e7%aa%97%e5%8f%a3%e9%83%bd%e8%a6%81%e7%82%b9%e5%87%bb%e7%a1%ae%e5%ae%9a%e4%b8%8d%e8%a6%81%e7%9b%b4%e6%8e%a5%e6%8a%8a%e7%aa%97%e5%8f%a3%e5%8f%89%e6%8e%89" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h6><p>bin是binary的缩写，也就是二进制文件。bin文件夹中包含我们将用到的大部分可执行二进制文件，包括gcc。现在这些可执行文件都能被终端找到了。</p>
-<p><img loading="lazy" src="/figures/bin3.png" alt="bin" srcset="/figures/bin3.png?size=small, /figures/bin3.png?size=medium 1.5x, /figures/bin3.png?size=large 2x" data-title="bin" style="--width: 1093px;--aspect-ratio: 1093 / 1087;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p class="custom-center"><img loading="lazy" src="/figures/bin2.png" alt="bin" srcset="/figures/bin2.png?size=small, /figures/bin2.png?size=medium 1.5x, /figures/bin2.png?size=large 2x" data-title="bin" style="--width: 817px;--aspect-ratio: 817 / 787;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">退出的时候所有窗口都要点击确定！不要直接把窗口叉掉！</div>
+    </div>
+  </div>
+<p>bin是binary的缩写，也就是二进制文件。bin文件夹中包含我们将用到的大部分可执行二进制文件，包括gcc。现在这些可执行文件都能被终端找到了。
+如果打开bin文件夹，可以找到以下的exe文件，现在这些.exe可执行文件都可以被终端直接执行。</p>
+<p class="custom-center"><img loading="lazy" src="/figures/bin3.png" alt="bin" srcset="/figures/bin3.png?size=small, /figures/bin3.png?size=medium 1.5x, /figures/bin3.png?size=large 2x" data-title="bin" style="--width: 1093px;--aspect-ratio: 1093 / 1087;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>Win+R 输入powershell打开终端，输入gcc得到一下结果：</p>
-<p><img loading="lazy" src="/figures/gcc-out.png" alt="bin" srcset="/figures/gcc-out.png?size=small, /figures/gcc-out.png?size=medium 1.5x, /figures/gcc-out.png?size=large 2x" data-title="bin" style="--width: 519px;--aspect-ratio: 519 / 85;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p class="custom-center"><img loading="lazy" src="/figures/gcc-out.png" alt="bin" srcset="/figures/gcc-out.png?size=small, /figures/gcc-out.png?size=medium 1.5x, /figures/gcc-out.png?size=large 2x" data-title="bin" style="--width: 519px;--aspect-ratio: 519 / 85;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>证明结果正确（fatal error的原因只是因为没有待编译的c文件输入而已）。</p>
 <h5 id="c-gcc编译c语言源文件" class="heading-element"><span>(c) gcc编译C语言源文件</span>
   <a href="#c-gcc%e7%bc%96%e8%af%91c%e8%af%ad%e8%a8%80%e6%ba%90%e6%96%87%e4%bb%b6" class="heading-mark">
@@ -79,20 +329,25 @@ Linux指令语法结构：
 <code>gcc prime.c -o prime.exe</code>
 Mac\Linux用户请输入：
 <code>gcc prime.c -o prime</code>
-prime.c是告诉gcc我想编译哪个文件，-o指的是输出文件名。
-<img loading="lazy" src="/figures/teach1.png" alt="bin" srcset="/figures/teach1.png?size=small, /figures/teach1.png?size=medium 1.5x, /figures/teach1.png?size=large 2x" data-title="bin" style="--width: 958px;--aspect-ratio: 958 / 31;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+prime.c是告诉gcc我想编译哪个文件，-o指的是输出文件名。</p>
+<p class="custom-center"><img loading="lazy" src="/figures/teach1.png" alt="bin" srcset="/figures/teach1.png?size=small, /figures/teach1.png?size=medium 1.5x, /figures/teach1.png?size=large 2x" data-title="bin" style="--width: 958px;--aspect-ratio: 958 / 31;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>之后文件夹中会多出一个叫prime.exe的二进制可执行文件。
 Windows运行该可执行文件只需输入：
 <code>.\prime.exe</code>
 Mac\Linux请输入：
 <code>.\prime</code>
 可执行文件即可被执行完成。由于prime.c的功能是输出1~100中所有的质数，被打印的质数将会在终端中显示。</p>
-<p><img loading="lazy" src="/figures/prime.png" alt="bin" srcset="/figures/prime.png?size=small, /figures/prime.png?size=medium 1.5x, /figures/prime.png?size=large 2x" data-title="bin" style="--width: 787px;--aspect-ratio: 787 / 780;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p class="custom-center"><img loading="lazy" src="/figures/prime.png" alt="bin" srcset="/figures/prime.png?size=small, /figures/prime.png?size=medium 1.5x, /figures/prime.png?size=large 2x" data-title="bin" style="--width: 787px;--aspect-ratio: 787 / 780;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <h3 id="4--uiuc-vpn安装" class="heading-element"><span>4.  UIUC VPN安装</span>
   <a href="#4--uiuc-vpn%e5%ae%89%e8%a3%85" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>由于我们将用github管理仓库，而国内连接github并不稳定，请大家尽快安装UIUC　VPN。</p>
+</h3><p>由于我们将用github管理仓库，而国内连接github并不稳定，请大家尽快安装UIUC VPN。请根据自己的电脑
+配置和操作系统选择合适的链接安装。
+VPN下载：<a href="https://answers.uillinois.edu/illinois/98773"target="_blank" rel="external nofollow noopener noreferrer">https://answers.uillinois.edu/illinois/98773</a></p>
+<p>安装完成之后输入：</p>
+<p class="custom-center"><img loading="lazy" src="/figures/vpn1.png" alt="/figures/vpn1.png" srcset="/figures/vpn1.png?size=small, /figures/vpn1.png?size=medium 1.5x, /figures/vpn1.png?size=large 2x" data-title="/figures/vpn1.png" style="--width: 622px;--aspect-ratio: 622 / 307;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>输入NetID和密码之后，切记选择通道3，否则无法正常访问外网。</p>
 <h3 id="5-c语言基础语法" class="heading-element"><span>5. C语言基础语法</span>
   <a href="#5-c%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>

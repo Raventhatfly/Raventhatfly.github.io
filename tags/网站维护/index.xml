@@ -1,0 +1,203 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>网站维护 - Tag - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/</link><description>网站维护 - Tag | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Tue, 14 May 2024 20:58:28 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/" rel="self" type="application/rss+xml"/><item><title>网站维护</title><link>https://Raventhatfly.github.io/posts/b7b4b1f/</link><pubDate>Tue, 14 May 2024 20:58:28 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/b7b4b1f/</guid><description><![CDATA[<h2 id="1-如何发布一篇新的帖子" class="heading-element"><span>1. 如何发布一篇新的帖子</span>
+  <a href="#1-%e5%a6%82%e4%bd%95%e5%8f%91%e5%b8%83%e4%b8%80%e7%af%87%e6%96%b0%e7%9a%84%e5%b8%96%e5%ad%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>以要新发布一篇名为maintain.md的帖子为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new content /posts/maintain.md</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该文件会被加入<code>content/posts</code>文件夹中。新的网页文件会被渲染。</p>
+<p>通过修改参数可以更改网页配置，具体信息查阅FixIt文档。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: 网站维护
+</span></span><span class="line"><span class="cl">subtitle: 介绍维护该网站的常用方法
+</span></span><span class="line"><span class="cl">date: 2024-05-14T20:58:28-05:00
+</span></span><span class="line"><span class="cl">slug: b7b4b1f
+</span></span><span class="line"><span class="cl">draft: true
+</span></span><span class="line"><span class="cl">author:
+</span></span><span class="line"><span class="cl">name: Feiyang Wu
+</span></span><span class="line"><span class="cl">link:
+</span></span><span class="line"><span class="cl">email:
+</span></span><span class="line"><span class="cl">avatar: /avatar_img/avatar.jpg
+</span></span><span class="line"><span class="cl">description:
+</span></span><span class="line"><span class="cl">keywords:
+</span></span><span class="line"><span class="cl">license:
+</span></span><span class="line"><span class="cl">comment: false
+</span></span><span class="line"><span class="cl">weight: 0
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 网站维护
+</span></span><span class="line"><span class="cl">categories:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> 网站维护
+</span></span><span class="line"><span class="cl">hiddenFromHomePage: false
+</span></span><span class="line"><span class="cl">hiddenFromSearch: false
+</span></span><span class="line"><span class="cl">hiddenFromRss: false
+</span></span><span class="line"><span class="cl">hiddenFromRelated: false
+</span></span><span class="line"><span class="cl">summary:
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> name: featured-image
+</span></span><span class="line"><span class="cl">src: featured-image.jpg
+</span></span><span class="line"><span class="cl"><span class="k">-</span> name: featured-image-preview
+</span></span><span class="line"><span class="cl">src: featured-image-preview.jpg
+</span></span><span class="line"><span class="cl">toc: true
+</span></span><span class="line"><span class="cl">math: false
+</span></span><span class="line"><span class="cl">lightgallery: false
+</span></span><span class="line"><span class="cl">password:
+</span></span><span class="line"><span class="cl">message:
+</span></span><span class="line"><span class="cl">repost:
+</span></span><span class="line"><span class="cl">enable: true
+</span></span><span class="line"><span class="cl">url:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span>---</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以上是本页面的配置信息。如果要渲染该页面，需要将<code>draft</code>值从默认的<code>true</code>改为<code>false</code>。</p>
+<h2 id="2-添加菜单内容" class="heading-element"><span>2. 添加菜单内容</span>
+  <a href="#2-%e6%b7%bb%e5%8a%a0%e8%8f%9c%e5%8d%95%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>找到hugo设置文件<code>hugo.toml</code>，加入菜单设置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">menu</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;archives&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># you can add extra information before the name (HTML format is supported), such as icons</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># you can add extra information after the name (HTML format is supported), such as icons</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Archives&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/archives/&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># title will be shown when you hover on this menu link</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="c"># FixIt 0.2.14 | NEW add user-defined content to menu items</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># add css class to a specific menu item</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">class</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># whether set as a draft menu item whose function is similar to a draft post/page</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">draft</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;fa-solid fa-archive&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># FixIt 0.2.16 | NEW set menu item type, optional values: [&#34;mobile&#34;, &#34;desktop&#34;]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>具体用法详见FixIt文档。</p>
+<h2 id="3-添加静态页面" class="heading-element"><span>3. 添加静态页面</span>
+  <a href="#3-%e6%b7%bb%e5%8a%a0%e9%9d%99%e6%80%81%e9%a1%b5%e9%9d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>做法类似添加一个新帖子。直接将markdowm文件加入<code>content</code>文件夹即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new content mian.md</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果该页面无法通过菜单直接找到，可以在markdown最开始的配置区域加上url，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title = &#39;RoboMaster Meta战队&#39;
+</span></span><span class="line"><span class="cl">subtitle = &#39;2024电控教学主页&#39;
+</span></span><span class="line"><span class="cl">date = 2024-05-14T14:17:45-05:00
+</span></span><span class="line"><span class="cl">draft = false
+</span></span><span class="line"><span class="cl">url = &#39;/meta-teaching/main&#39;
+</span></span><span class="line"><span class="cl">+++</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该静态页面就会显示在网站/meta-teaching/main页面。</p>
+<h2 id="4-添加图片和资源" class="heading-element"><span>4. 添加图片和资源</span>
+  <a href="#4-%e6%b7%bb%e5%8a%a0%e5%9b%be%e7%89%87%e5%92%8c%e8%b5%84%e6%ba%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>将所有的图片和资源放入<code>assets</code>文件夹。资源和文件将以该文件夹为根目录进行寻址。</p>
+<h2 id="5-更多其他功能" class="heading-element"><span>5. 更多其他功能</span>
+  <a href="#5-%e6%9b%b4%e5%a4%9a%e5%85%b6%e4%bb%96%e5%8a%9f%e8%83%bd" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>更多其他功能请查阅FixIt文档。本文档仅介绍基础维护方法。</p>
+<hr class="awesome-hr">]]></description></item></channel></rss>

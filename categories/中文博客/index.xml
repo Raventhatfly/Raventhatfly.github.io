@@ -1,0 +1,44 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>中文博客 - Category - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/categories/%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2/</link><description>中文博客 - Category | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Tue, 14 May 2024 19:25:05 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/categories/%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml"/><item><title>Hugo Setup</title><link>https://Raventhatfly.github.io/posts/c9bea25/</link><pubDate>Tue, 14 May 2024 19:25:05 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/c9bea25/</guid><description><![CDATA[<h1 id="本网站基于hugo和githubio的建立教程" class="heading-element"><span>本网站基于HUGO和github.io的建立教程</span>
+  <a href="#%e6%9c%ac%e7%bd%91%e7%ab%99%e5%9f%ba%e4%ba%8ehugo%e5%92%8cgithubio%e7%9a%84%e5%bb%ba%e7%ab%8b%e6%95%99%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>2024年5月的某一天，我和倪驰明讨论为我们在2024年下半年建立网站方便教学的有关事宜。
+一开始我本来想自己手写html，但是倪驰明说，为什么不用hugo呢？</p>
+<p>Hugo 是一个流行的静态网站生成器（Static Site Generator，SSG），它允许用户从简单的文本文件（如 Markdown 文件）
+生成完整的静态网站，因此我们可以通过编写markdown快速部署网页而无需大量编写html。</p>
+<p>从2024年5月12日开始，我致力于使用Hugo开发这个网站。由于我计划将这个网站部署到github.io，因此
+我将同时通过这个架构来开发自己的个人主页。</p>
+<h2 id="1-下载安装hugo" class="heading-element"><span>1. 下载安装Hugo</span>
+  <a href="#1-%e4%b8%8b%e8%bd%bd%e5%ae%89%e8%a3%85hugo" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>首先进入官网，找到<a href="https://gohugo.io/installation/windows/"target="_blank" rel="external nofollow noopener noreferrer">安装</a>页面。根据官网的指示进行安装。
+我的开发平台是Windows，其包管理工具没有像Linux和MacOS那么方便。那么我们可以直接找到<a href="https://github.com/gohugoio/hugo/releases/tag/v0.126.0"target="_blank" rel="external nofollow noopener noreferrer">Prebuilt
+Binaries</a>，由于我的电脑是AMD芯片，因此我选择hugo_extended_0.125.7_windows-amd64的版本进行
+下载，解压，并安装。安装完成之后，将hugo所在的文件夹添加到Path环境变量。终端输入<code>hugo version</code>
+，成功打印版本号，证明安装成功。</p>
+<h2 id="2-选择心仪的hugo主题" class="heading-element"><span>2. 选择心仪的Hugo主题</span>
+  <a href="#2-%e9%80%89%e6%8b%a9%e5%bf%83%e4%bb%aa%e7%9a%84hugo%e4%b8%bb%e9%a2%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们可以到<a href="https://themes.gohugo.io/"target="_blank" rel="external nofollow noopener noreferrer">Hugo主题页面</a>选择合适的主题。我最终挑选FixIt作为我的网站主题。
+选择到合适的主题后即可根据Hugo官方教程或<a href="https://fixit.lruihao.cn/documentation/getting-started/quick-start/"target="_blank" rel="external nofollow noopener noreferrer">FixIt官方教程</a>进行安装。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo new site mySite
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> mySite
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完成之后运行Hugo Server即可在localhost:1313测试网站。</p>
+<h2 id="3-github-网站发布" class="heading-element"><span>3. Github 网站发布</span>
+  <a href="#3-github-%e7%bd%91%e7%ab%99%e5%8f%91%e5%b8%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>参考了<a href="https://simumis.com/posts/deploy-to-github/#5%E5%8F%91%E5%B8%83%E7%BD%91%E7%AB%99"target="_blank" rel="external nofollow noopener noreferrer">博客文章</a>。</p>]]></description></item></channel></rss>
