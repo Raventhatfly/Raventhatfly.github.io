@@ -1,4 +1,310 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/posts/</link><description>All Posts | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Tue, 14 May 2024 20:58:28 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>网站维护</title><link>https://Raventhatfly.github.io/posts/b7b4b1f/</link><pubDate>Tue, 14 May 2024 20:58:28 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/b7b4b1f/</guid><description><![CDATA[<h2 id="1-如何发布一篇新的帖子" class="heading-element"><span>1. 如何发布一篇新的帖子</span>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/posts/</link><description>All Posts | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Wed, 15 May 2024 09:15:14 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Lecture2</title><link>https://Raventhatfly.github.io/posts/bd7db78/</link><pubDate>Wed, 15 May 2024 09:15:14 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/bd7db78/</guid><description><![CDATA[<h1 id="c--c-编译原理" class="heading-element"><span>C / C++ 编译原理</span>
+  <a href="#c--c-%e7%bc%96%e8%af%91%e5%8e%9f%e7%90%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h3 id="需要提前掌握的基础知识" class="heading-element"><span>需要提前掌握的基础知识</span>
+  <a href="#%e9%9c%80%e8%a6%81%e6%8f%90%e5%89%8d%e6%8e%8c%e6%8f%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>比特和字节的关系，8bit = 1B</li>
+<li>十六进制数的表达方式以及十六进制数和二进制数的转换
+<ul>
+<li>例子：0x2f = 00101111</li>
+</ul>
+</li>
+</ul>
+<h3 id="预习内容" class="heading-element"><span>预习内容</span>
+  <a href="#%e9%a2%84%e4%b9%a0%e5%86%85%e5%ae%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h3 id="1-中央处理器cpu架构" class="heading-element"><span>1. 中央处理器（CPU）架构</span>
+  <a href="#1-%e4%b8%ad%e5%a4%ae%e5%a4%84%e7%90%86%e5%99%a8cpu%e6%9e%b6%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h5 id="内存" class="heading-element"><span>内存</span>
+  <a href="#%e5%86%85%e5%ad%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>内存是计算机的存储空间。</p>
+<p>对于很多没有接触过计算机的人来说，内存=硬盘。其实这种理解是错误的。内存掉电会丢失内容，而
+硬盘在掉电之后信息不会丢失。但是内存的访问速度比硬盘快，因此实际上在电脑启动时操作系统的代码
+会从硬盘上搬迁到内存里。平时打开的文件也是如此。</p>
+<p>内存地址的基本单位是字节。一个字节=8比特。对于32位计算机，其寻址能力为32位，意思是有2^32个
+地址。大部分计算机是字节寻址，即一个地址对应一个字节的数据（ECE120涉及的LC3是16位机，但是
+一个地址对应2B两个字节的数据）。</p>
+<h5 id="其他" class="heading-element"><span>其他</span>
+  <a href="#%e5%85%b6%e4%bb%96" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>交给ECE120去学吧。</p>
+<h3 id="2-编译流程" class="heading-element"><span>2. 编译流程</span>
+  <a href="#2-%e7%bc%96%e8%af%91%e6%b5%81%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="常见概念" class="heading-element"><span>常见概念</span>
+  <a href="#%e5%b8%b8%e8%a7%81%e6%a6%82%e5%bf%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>头文件<code>.h</code>包含了函数声明、宏定义等。在C++当中还会存放类。<code>.c</code>文件中存放源代码。</p>
+<h4 id="具体流程" class="heading-element"><span>具体流程</span>
+  <a href="#%e5%85%b7%e4%bd%93%e6%b5%81%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h5 id="a预处理阶段" class="heading-element"><span>(a)预处理阶段</span>
+  <a href="#a%e9%a2%84%e5%a4%84%e7%90%86%e9%98%b6%e6%ae%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>预处理阶段，其实用朴素的话语来讲就是对宏（Macro）进行文本替换或展开。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>在预处理完成之后，这段代码会被直接替换位<code>stdio.h</code>头文件包含的内容。
+再例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#define GPIO_DEVICE_ID 1</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>代码里所有出现的<code>GPIO_DEVICE_ID</code>将被替换为1。</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">当使用<code>#include</code>之后，就可以使用头文件里的宏。除非是编译器定义的宏，否则可能会无法被找到。</div>
+    </div>
+  </div>
+<h5 id="b编译阶段" class="heading-element"><span>(b)编译阶段</span>
+  <a href="#b%e7%bc%96%e8%af%91%e9%98%b6%e6%ae%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>将所有预处理之后的C/C++代码翻译成汇编语言(汇编文件一般以<code>.s</code>,<code>.asm</code>为后缀，将会在ECE120
+后期课程涉及)。</p>
+<h5 id="c汇编阶段" class="heading-element"><span>(c)汇编阶段</span>
+  <a href="#c%e6%b1%87%e7%bc%96%e9%98%b6%e6%ae%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>将汇编语言翻译成计算机可执行的二进制文件(生成若干<code>.o</code>，<code>.obj</code>文件)。每个独立的二进制文件
+由于不知道相互之间的关系，现在还无法独立运行。</p>
+<h5 id="d链接阶段" class="heading-element"><span>(d)链接阶段</span>
+  <a href="#d%e9%93%be%e6%8e%a5%e9%98%b6%e6%ae%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p>这个阶段是最令人头大阶段。链接过程将多个目标文以及所需的库文件(.so等)链接成最终的可执行文件
+(executable file)。该过程较为复杂，希望详细了解可以阅读<a href="https://zhuanlan.zhihu.com/p/88255667"target="_blank" rel="external nofollow noopener noreferrer">知乎文章</a>。
+通俗易懂的讲法，就是把每个C/C++文件生成的二进制文件，或者一些厂商（例如Windows）提供的
+二进制文件（即静态与动态链接库，常见后缀<code>.so</code>，<code>.lib</code>，<code>.a</code>）组装在一起。</p>
+<p><strong>静态链接库</strong>：当要使用时，连接器(linker)会找出程序所需的函数，然后将它们拷贝到执行文件，
+由于这种拷贝是完整的，所以一旦连接成功，静态程序库也就不再需要了。</p>
+<p><strong>动态库链接库</strong>：某个程序在运行中要调用某个动态链接库函数的时候，操作系统首先会查看所有正在运行的程序，看在内存里是否已有此库函数的拷贝了。
+如果有，则让其共享那一个拷贝；只有没有才链接载入</p>
+<p><strong>常见错误</strong>：</p>
+<p>如果使用一个函数但没有定义它（大部分时候有可能是函数单纯打错了）：
+<div class="details admonition failure open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>Failure<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">link_example.c:(.text+0xe): undefined reference to `foo'
+collect2.exe: error: ld returned 1 exit status</div>
+    </div>
+  </div></p>
+<p>如果链接器发现了两个不同的二进制文件中有相同的全局变量或函数，连接器会这么报错：
+<div class="details admonition failure open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>Failure<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">/tmp/ccIa32rv.o:(.bss+0x0): multiple definition of <code>head'/tmp/ccAvumDO.o:(.bss+0x0): first defined here /tmp/ccuVImET.o:(.bss+0x0): multiple definition of </code>head'
+/tmp/ccAvumDO.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status</div>
+    </div>
+  </div></p>
+<h3 id="3-编译脚本" class="heading-element"><span>3. 编译脚本</span>
+  <a href="#3-%e7%bc%96%e8%af%91%e8%84%9a%e6%9c%ac" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>脚本(sript)就是把一些命令放在一个文件里，这样在执行的时候不需要一条条手动输入而是一次性
+全部执行的一个文件。</p>
+<p>编程语言也主要分为两种：编译语言与脚本语言。脚本语言的每一条代码逐条投喂至解释器，并理解
+翻译成二进制代码供CPU执行。而编译语言将全部代码全部翻译为二进制代码之后才能供CPU执行。
+最常见的脚本语言是Python。最典型的编译语言即为C和C++。</p>
+<h4 id="makefile" class="heading-element"><span>Makefile</span>
+  <a href="#makefile" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>Makefile 是一个用于管理项目构建的文件，通常用于编译和链接程序，特别是在大型项目中。
+它通过定义一系列规则和目标，自动化了编译和构建过程，从而避免了手动输入复杂的编译命令。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="line"><span class="cl"><span class="c"># 定义变量
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nv">CC</span> <span class="o">=</span> gcc
+</span></span><span class="line"><span class="cl"><span class="nv">CFLAGS</span> <span class="o">=</span> -Wall -g
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 定义目标文件
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nv">TARGET</span> <span class="o">=</span> myprogram
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 定义依赖关系和规则
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">$(TARGET)</span><span class="o">:</span> <span class="n">main</span>.<span class="n">o</span> <span class="n">utils</span>.<span class="n">o</span>
+</span></span><span class="line"><span class="cl">    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -o <span class="k">$(</span>TARGET<span class="k">)</span> main.o utils.o
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">main.o</span><span class="o">:</span> <span class="n">main</span>.<span class="n">c</span>
+</span></span><span class="line"><span class="cl">    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -c main.c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">utils.o</span><span class="o">:</span> <span class="n">utils</span>.<span class="n">c</span>
+</span></span><span class="line"><span class="cl">    <span class="k">$(</span>CC<span class="k">)</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -c utils.c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 伪目标，用于清理构建文件
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">.PHONY</span><span class="o">:</span> <span class="n">clean</span>
+</span></span><span class="line"><span class="cl"><span class="nf">clean</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    rm -f <span class="k">$(</span>TARGET<span class="k">)</span> *.o
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>找到项目的Makefile文件，打开终端输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">make</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>make</code>将根据Makefile生成<code>gcc</code>指令。例如上述代码的运行路径为中的文件有：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">my_project/
+</span></span><span class="line"><span class="cl">├── Makefile
+</span></span><span class="line"><span class="cl">├── main.cpp
+</span></span><span class="line"><span class="cl">└── utils.cpp</span></span></code></pre></td></tr></table>
+</div>
+</div><p>$(CC)会被翻译成gcc，$(CFLAGS)会被翻译成-Wall -g。-o 我们在之前介绍过，是输出的意思。
+所以如果输入<code>make myprogram</code>实际上相当于输入了以下的gcc指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">gcc -Wall -g -c main.c <span class="c1"># 将main.c编译为main.o</span>
+</span></span><span class="line"><span class="cl">gcc -Wall -g -c utils.c
+</span></span><span class="line"><span class="cl">gcc -Wall -g -o myprogram main.o utils.o <span class="c1"># 通过.o文件生成myprogram可执行文件</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="cmake" class="heading-element"><span>CMake</span>
+  <a href="#cmake" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>CMake 是一个跨台的构建系统，它用于管理项目的编译过程，生成特定于平台的构建文件（如
+Makefile、Visual Studio 项目文件等）。CMake 通过一种高级脚本语言来描述构建过程，
+能够更好地处理复杂的构建需求，并且在不同平台之间保持一致性。在我们的项目中我们一般使用
+Cmake来生成Makefile。</p>
+<p>假设现在我们的项目文件夹为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">my_project/
+</span></span><span class="line"><span class="cl">├── CMakeLists.txt
+</span></span><span class="line"><span class="cl">├── main.cpp
+</span></span><span class="line"><span class="cl">└── utils.cpp</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>CMakeLists.txt</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.10</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 项目信息
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">project</span><span class="p">(</span><span class="s">MyProject</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 设置 C++ 标准
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span> <span class="s">11</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span> <span class="s">True</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 添加可执行文件
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">add_executable</span><span class="p">(</span><span class="s">MyProject</span> <span class="s">main.cpp</span> <span class="s">utils.cpp</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake ..  <span class="c1"># .. 表示上一级目录，这里的意思是Cmakelists.txt在上一级目录</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后我们就能在build文件夹中找到Makefile了。此时我们就能运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">make</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们就能得到想要的二进制可执行文件了。</p>
+<h3 id="课后作业" class="heading-element"><span>课后作业</span>
+  <a href="#%e8%af%be%e5%90%8e%e4%bd%9c%e4%b8%9a" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ul>
+<li>使用Makefile和Cmake成功编译文件。</li>
+<li>继续观看黑马程序员教学视频。</li>
+</ul>
+<hr class="awesome-hr">]]></description></item><item><title>网站维护</title><link>https://Raventhatfly.github.io/posts/b7b4b1f/</link><pubDate>Tue, 14 May 2024 20:58:28 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/b7b4b1f/</guid><description><![CDATA[<h2 id="1-如何发布一篇新的帖子" class="heading-element"><span>1. 如何发布一篇新的帖子</span>
   <a href="#1-%e5%a6%82%e4%bd%95%e5%8f%91%e5%b8%83%e4%b8%80%e7%af%87%e6%96%b0%e7%9a%84%e5%b8%96%e5%ad%90" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
