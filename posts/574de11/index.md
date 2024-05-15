@@ -122,7 +122,22 @@ VPN下载：[https://answers.uillinois.edu/illinois/98773](https://answers.uilli
 {.custom-center}
 
 输入NetID和密码之后，切记选择通道3，否则无法正常访问外网。
-### 5. C语言基础语法
+
+### 5. git和github
+
+
+对于MacOS用户：
+```shell
+brew install git
+```
+对于Linux用户：
+```shell
+sudo apt install git
+```
+对于Windows用户：git安装点击[此处](https://git-scm.com/downloads)。
+Windows用户下载文件后，如果没有自动添加环境变量则需手动添加环境变量。
+
+### 6. C语言基础语法
 自行查阅预习内容。应掌握的内容为：P1-P24
 应掌握的概念：注释、常量、关键字、变量、字符类型、标识符、数据类型、if语句
 

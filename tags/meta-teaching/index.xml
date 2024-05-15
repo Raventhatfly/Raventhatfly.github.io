@@ -409,8 +409,30 @@ VPN下载：<a href="https://answers.uillinois.edu/illinois/98773"target="_blank
 <p>安装完成之后输入：</p>
 <p class="custom-center"><img loading="lazy" src="/figures/vpn1.png" alt="/figures/vpn1.png" srcset="/figures/vpn1.png?size=small, /figures/vpn1.png?size=medium 1.5x, /figures/vpn1.png?size=large 2x" data-title="/figures/vpn1.png" style="--width: 622px;--aspect-ratio: 622 / 307;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>输入NetID和密码之后，切记选择通道3，否则无法正常访问外网。</p>
-<h3 id="5-c语言基础语法" class="heading-element"><span>5. C语言基础语法</span>
-  <a href="#5-c%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="heading-mark">
+<h3 id="5-git和github" class="heading-element"><span>5. git和github</span>
+  <a href="#5-git%e5%92%8cgithub" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>对于MacOS用户：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">brew install git</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对于Linux用户：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install git</span></span></code></pre></td></tr></table>
+</div>
+</div><p>对于Windows用户：git安装点击<a href="https://git-scm.com/downloads"target="_blank" rel="external nofollow noopener noreferrer">此处</a>。
+Windows用户下载文件后，如果没有自动添加环境变量则需手动添加环境变量。</p>
+<h3 id="6-c语言基础语法" class="heading-element"><span>6. C语言基础语法</span>
+  <a href="#6-c%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><p>自行查阅预习内容。应掌握的内容为：P1-P24
