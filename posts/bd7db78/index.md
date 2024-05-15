@@ -127,8 +127,8 @@ make
 ```shell
 my_project/
 ├── Makefile
-├── main.cpp
-└── utils.cpp
+├── main.c
+└── utils.c
 ```
 $(CC)会被翻译成gcc，$(CFLAGS)会被翻译成-Wall -g。-o 我们在之前介绍过，是输出的意思。
 所以如果输入`make myprogram`实际上相当于输入了以下的gcc指令：
