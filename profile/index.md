@@ -45,6 +45,9 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 * 2023 RoboMaster University League (Shanghai Station) Second Prize (2023机甲大师高校联盟赛上海站二等奖)
 * Co-author of CVPR2024 accepted paper _MovieChat: From Dense Token to Sparse Memory for Long Video Understanding_, with the role of data collection and labeling.
 [View Paper](https://arxiv.org/abs/2307.16449)
+
+###
+
 ---
 {.awesome-hr}
 
