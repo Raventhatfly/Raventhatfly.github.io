@@ -91,6 +91,8 @@ Binaries</a>，由于我的电脑是AMD芯片，因此我选择hugo_extended_0.1
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><p class="custom-center"><img loading="lazy" src="/figures/stm32_type.png" alt="STM32" srcset="/figures/stm32_type.png?size=small, /figures/stm32_type.png?size=medium 1.5x, /figures/stm32_type.png?size=large 2x" data-title="STM32" style="--width: 1360px;--aspect-ratio: 1360 / 629;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计的ARM Cortex®-M0，M0+，M3, M4和M7内核  。按内核架构分为不同产品：
+主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。</p>
 <p>STM32最常见型号：STM32F1系列和STM32F4系列。
 RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。</p>
 <h3 id="3-stm32-外设" class="heading-element"><span>3. STM32 外设</span>
@@ -471,6 +473,8 @@ Linux指令语法结构：
 </h5><p>（Mac和Linux用户可忽略此步，因为Mac和Linux自带gcc编译器）</p>
 <p>接下来是windows MinGW编译器安装方法：
 下载：<a href="https://sourceforge.net/projects/mingw/files/latest/download"target="_blank" rel="external nofollow noopener noreferrer">https://sourceforge.net/projects/mingw/files/latest/download</a></p>
+<p>大家可以按照这个<a href="https://github.com/Meta-Team/Meta-Embedded/wiki/%E5%B7%A5%E5%85%B7%E9%93%BE-%E5%AE%89%E8%A3%85-Win#%E4%BD%BF%E7%94%A8-mingw-installation-manager-%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7"target="_blank" rel="external nofollow noopener noreferrer">教程</a>的MinGW部分进行安装。</p>
+<p>如果觉得环境变量部分还不够清楚，可以根据以下方法操作：</p>
 <p>安装完成之后，找到安装位置，我们发现里面有一个bin文件夹：</p>
 <p class="custom-center"><img loading="lazy" src="/figures/bin.png" alt="图片" srcset="/figures/bin.png?size=small, /figures/bin.png?size=medium 1.5x, /figures/bin.png?size=large 2x" data-title="图片" style="--width: 1156px;--aspect-ratio: 1156 / 613;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
 <p>来源：<a href="https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949"target="_blank" rel="external nofollow noopener noreferrer">https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/1730949</a></p>

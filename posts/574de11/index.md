@@ -50,6 +50,10 @@ arguments 参数：表示命令的作用对象，可以有多个参数，通常�
 接下来是windows MinGW编译器安装方法：
 下载：[https://sourceforge.net/projects/mingw/files/latest/download](https://sourceforge.net/projects/mingw/files/latest/download)
 
+大家可以按照这个[教程](https://github.com/Meta-Team/Meta-Embedded/wiki/%E5%B7%A5%E5%85%B7%E9%93%BE-%E5%AE%89%E8%A3%85-Win#%E4%BD%BF%E7%94%A8-mingw-installation-manager-%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E5%B7%A5%E5%85%B7)的MinGW部分进行安装。
+
+如果觉得环境变量部分还不够清楚，可以根据以下方法操作：
+
 安装完成之后，找到安装位置，我们发现里面有一个bin文件夹：
 
 ![图片](/figures/bin.png)
