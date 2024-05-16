@@ -17,11 +17,11 @@
 
 ### 教学内容 :(fa-solid fa-folder-open):
 
-| 课程                     | 内容描述              | 文件                                                  |
-|------------------------|-------------------|-----------------------------------------------------|
+| 课程                          | 内容描述              | 文件                                                |
+|-----------------------------|-------------------|---------------------------------------------------|
 | [Lecture1](/posts/574de11/) | 电控组介绍、C语言及开发技巧    | [Lecture1.pptx](/files/meta-teaching/Lecture1.pptx) |
 | [Lecutre2](/posts/bd7db78/) | C语言编译原理           | [Lecture2.pptx](/files/meta-teaching/Lecture2.pptx) |
-| Lecutre3               | STM32介绍           | Lecture3.pptx                                       |
+| [Lecutre3](/posts/2e8f072/) | STM32介绍           | Lecture3.pptx                                     |
 
 ---
 {.awesome-hr}

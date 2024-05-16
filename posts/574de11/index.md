@@ -1,6 +1,6 @@
 # Lecture1
 
-## META 战队电控培训【第一讲】讲义
+## 欢迎来到Meta战队电控组
 ### 1. 预习内容
 C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：[https://code.visualstudio.com/](https://code.visualstudio.com/)。
 
