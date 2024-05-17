@@ -7,13 +7,17 @@
   
     
   
-STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
-单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
-成电路，其所有组件小型化至一块或数块集成电路内。
 基础知识
   
     
   
+单片机
+单片机（Single-chip microcomputer），是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人计算机中的通用微处理器相比，它更强调自供应（不用外接硬件）和节约成本，集成程度更高，但因为规格已经包含，所能实现的功能也较专一。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单。由于其发展非常迅速，旧的定义已不能满足，所以在很多应用场合被称为范围更广的微控制器（microcontroller）。
+STM32
+STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
+单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
+成电路，其所有组件小型化至一块或数块集成电路内。
+其他概念
 
 
 计算机架构：计算机使用的指令集
@@ -24,6 +28,10 @@ STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32�
 
 外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。
 例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。
+
+
+寄存器：
+寄存器（Register）是中央处理器内用来暂存指令、数据和地址的存储器。寄存器的存贮容量有限，读写速度非常快。在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的执行。
 
 
 常见单片机
@@ -53,21 +61,88 @@ STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计
 主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。
 STM32最常见型号：STM32F1系列和STM32F4系列。
 RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。
-3. STM32 外设
+3. 常用开发工具
   
     
   
-4. STM32 编程
+开发软件
+  
+    
+  
+
+Keil5
+STM32CubeMX
+Clion
+ARM GNU Toolchain (arm-none-eabi编译器)
+Eclipse
+
+开发软件库
+  
+    
+  
+
+CMSIS
+STM32标准库
+STM32标准HAL库
+实时操作系统(FreeRTOS, uCOS, ChibiOS)
+
+烧录器
+  
+    
+  
+
+ST-Link
+JTAG
+
+debug、烧录软件
+  
+    
+  
+
+OpenOCD
+
+4. STM32开发方法简述
   
     
   
 对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、
-标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。
-5. STM32
+标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。如果
+不采取裸机编程，那么将会使用到实时操作系统(RTOS)。
+RTOS具有Linux等操作系统不具有的任务实时性响应机制，具体体现在线程调度机制等方面。
+(a) Keil + 标准库
   
     
   
+(b) Keil + STM32CubeMX + 标准Hal库
+  
+    
+  
+(c) Keil + STM32CubeMX + 标准Hal库 + FreeRTOS
+  
+    
+  
+(d) Clion + ChibiOS + ChibiOS HAL
+  
+    
+  
+5. Metaz战队工具链
+  
+    
+  
+工具链配置教程由Meta战队前项管刘子恺学长倾力打造。
+因为这篇Wiki年代久远，其中有些链接内容可能已经发生错误或者失效。
+在之前的文章中，我们已经安装过MinGW, git, cmake等工具，在根据教程安装工具链时，不要重复安装。
+Meta战队工具链配置教程点击此处。
 6. 课后作业
+  
+    
+  
+
+继续观看黑马程序员
+按照第五部分教程链接完成工具链配置。
+（可选）自行学习STM32有关知识
+
+
   
     
   
@@ -79,13 +154,17 @@ RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板�
   
     
   
-STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
-单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
-成电路，其所有组件小型化至一块或数块集成电路内。
 基础知识
   
     
   
+单片机
+单片机（Single-chip microcomputer），是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人计算机中的通用微处理器相比，它更强调自供应（不用外接硬件）和节约成本，集成程度更高，但因为规格已经包含，所能实现的功能也较专一。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单。由于其发展非常迅速，旧的定义已不能满足，所以在很多应用场合被称为范围更广的微控制器（microcontroller）。
+STM32
+STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
+单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
+成电路，其所有组件小型化至一块或数块集成电路内。
+其他概念
 
 
 计算机架构：计算机使用的指令集
@@ -96,6 +175,10 @@ STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32�
 
 外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。
 例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。
+
+
+寄存器：
+寄存器（Register）是中央处理器内用来暂存指令、数据和地址的存储器。寄存器的存贮容量有限，读写速度非常快。在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的执行。
 
 
 常见单片机
@@ -125,32 +208,107 @@ STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计
 主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。
 STM32最常见型号：STM32F1系列和STM32F4系列。
 RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。
-3. STM32 外设
+3. 常用开发工具
   
     
   
-4. STM32 编程
+开发软件
+  
+    
+  
+
+Keil5
+STM32CubeMX
+Clion
+ARM GNU Toolchain (arm-none-eabi编译器)
+Eclipse
+
+开发软件库
+  
+    
+  
+
+CMSIS
+STM32标准库
+STM32标准HAL库
+实时操作系统(FreeRTOS, uCOS, ChibiOS)
+
+烧录器
+  
+    
+  
+
+ST-Link
+JTAG
+
+debug、烧录软件
+  
+    
+  
+
+OpenOCD
+
+4. STM32开发方法简述
   
     
   
 对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、
-标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。
-5. STM32
+标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。如果
+不采取裸机编程，那么将会使用到实时操作系统(RTOS)。
+RTOS具有Linux等操作系统不具有的任务实时性响应机制，具体体现在线程调度机制等方面。
+(a) Keil + 标准库
   
     
   
+(b) Keil + STM32CubeMX + 标准Hal库
+  
+    
+  
+(c) Keil + STM32CubeMX + 标准Hal库 + FreeRTOS
+  
+    
+  
+(d) Clion + ChibiOS + ChibiOS HAL
+  
+    
+  
+5. Metaz战队工具链
+  
+    
+  
+工具链配置教程由Meta战队前项管刘子恺学长倾力打造。
+因为这篇Wiki年代久远，其中有些链接内容可能已经发生错误或者失效。
+在之前的文章中，我们已经安装过MinGW, git, cmake等工具，在根据教程安装工具链时，不要重复安装。
+Meta战队工具链配置教程点击此处。
 6. 课后作业
   
     
   
-"><meta itemprop=datePublished content="2024-05-15T23:10:16-05:00"><meta itemprop=dateModified content="2024-05-16T01:16:18-05:00"><meta itemprop=wordCount content="48"><meta itemprop=keywords content="Meta-Teaching"><meta property="og:url" content="https://Raventhatfly.github.io/posts/2e8f072/"><meta property="og:site_name" content="Feiyang Wu Personal Page"><meta property="og:title" content="Lecture3"><meta property="og:description" content="STM32基础 1. STM32简介 STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。 单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集 成电路，其所有组件小型化至一块或数块集成电路内。
-基础知识 计算机架构：计算机使用的指令集
+
+继续观看黑马程序员
+按照第五部分教程链接完成工具链配置。
+（可选）自行学习STM32有关知识
+
+
+  
+    
+  
+"><meta itemprop=datePublished content="2024-05-15T23:10:16-05:00"><meta itemprop=dateModified content="2024-05-17T01:13:56-05:00"><meta itemprop=wordCount content="110"><meta itemprop=keywords content="Meta-Teaching"><meta property="og:url" content="https://Raventhatfly.github.io/posts/2e8f072/"><meta property="og:site_name" content="Feiyang Wu Personal Page"><meta property="og:title" content="Lecture3"><meta property="og:description" content="STM32基础 1. STM32简介 基础知识 单片机
+单片机（Single-chip microcomputer），是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人计算机中的通用微处理器相比，它更强调自供应（不用外接硬件）和节约成本，集成程度更高，但因为规格已经包含，所能实现的功能也较专一。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单。由于其发展非常迅速，旧的定义已不能满足，所以在很多应用场合被称为范围更广的微控制器（microcontroller）。
+STM32
+STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。 单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集 成电路，其所有组件小型化至一块或数块集成电路内。
+其他概念
+计算机架构：计算机使用的指令集
 计算机常见架构：ARM架构、x86架构 外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。 例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。
+寄存器： 寄存器（Register）是中央处理器内用来暂存指令、数据和地址的存储器。寄存器的存贮容量有限，读写速度非常快。在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的执行。
 常见单片机 51系列单片机 STM32 ESP32 STM32组成 ARM Cortex CPU 外设 STM32实质上是由ARM提供中央处理器，意法半导体在此基础上设计外设所组成的微处理器。
 2. STM32型号与分类 STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计的ARM Cortex®-M0，M0+，M3, M4和M7内核 。按内核架构分为不同产品： 主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。
 STM32最常见型号：STM32F1系列和STM32F4系列。 RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。
-3. STM32 外设 4. STM32 编程 对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、 标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。
-5. STM32 6. 课后作业 "><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-05-15T23:10:16-05:00"><meta property="article:modified_time" content="2024-05-16T01:16:18-05:00"><meta property="article:tag" content="Meta-Teaching"><meta name=twitter:card content="summary"><meta name=twitter:title content="Lecture3"><meta name=twitter:description content="STM32基础
+3. 常用开发工具 开发软件 Keil5 STM32CubeMX Clion ARM GNU Toolchain (arm-none-eabi编译器) Eclipse 开发软件库 CMSIS STM32标准库 STM32标准HAL库 实时操作系统(FreeRTOS, uCOS, ChibiOS) 烧录器 ST-Link JTAG debug、烧录软件 OpenOCD 4. STM32开发方法简述 对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、 标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。如果 不采取裸机编程，那么将会使用到实时操作系统(RTOS)。
+RTOS具有Linux等操作系统不具有的任务实时性响应机制，具体体现在线程调度机制等方面。
+(a) Keil + 标准库 (b) Keil + STM32CubeMX + 标准Hal库 (c) Keil + STM32CubeMX + 标准Hal库 + FreeRTOS (d) Clion + ChibiOS + ChibiOS HAL 5. Metaz战队工具链 工具链配置教程由Meta战队前项管刘子恺学长倾力打造。 因为这篇Wiki年代久远，其中有些链接内容可能已经发生错误或者失效。 在之前的文章中，我们已经安装过MinGW, git, cmake等工具，在根据教程安装工具链时，不要重复安装。
+Meta战队工具链配置教程点击此处。
+6. 课后作业 继续观看黑马程序员 按照第五部分教程链接完成工具链配置。 （可选）自行学习STM32有关知识 "><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-05-15T23:10:16-05:00"><meta property="article:modified_time" content="2024-05-17T01:13:56-05:00"><meta property="article:tag" content="Meta-Teaching"><meta name=twitter:card content="summary"><meta name=twitter:title content="Lecture3"><meta name=twitter:description content="STM32基础
   
     
   
@@ -158,13 +316,17 @@ STM32最常见型号：STM32F1系列和STM32F4系列。 RoboMaster A型开发板
   
     
   
-STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
-单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
-成电路，其所有组件小型化至一块或数块集成电路内。
 基础知识
   
     
   
+单片机
+单片机（Single-chip microcomputer），是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人计算机中的通用微处理器相比，它更强调自供应（不用外接硬件）和节约成本，集成程度更高，但因为规格已经包含，所能实现的功能也较专一。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单。由于其发展非常迅速，旧的定义已不能满足，所以在很多应用场合被称为范围更广的微控制器（microcontroller）。
+STM32
+STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
+单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
+成电路，其所有组件小型化至一块或数块集成电路内。
+其他概念
 
 
 计算机架构：计算机使用的指令集
@@ -175,6 +337,10 @@ STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32�
 
 外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。
 例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。
+
+
+寄存器：
+寄存器（Register）是中央处理器内用来暂存指令、数据和地址的存储器。寄存器的存贮容量有限，读写速度非常快。在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的执行。
 
 
 常见单片机
@@ -204,43 +370,123 @@ STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计
 主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。
 STM32最常见型号：STM32F1系列和STM32F4系列。
 RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。
-3. STM32 外设
+3. 常用开发工具
   
     
   
-4. STM32 编程
+开发软件
+  
+    
+  
+
+Keil5
+STM32CubeMX
+Clion
+ARM GNU Toolchain (arm-none-eabi编译器)
+Eclipse
+
+开发软件库
+  
+    
+  
+
+CMSIS
+STM32标准库
+STM32标准HAL库
+实时操作系统(FreeRTOS, uCOS, ChibiOS)
+
+烧录器
+  
+    
+  
+
+ST-Link
+JTAG
+
+debug、烧录软件
+  
+    
+  
+
+OpenOCD
+
+4. STM32开发方法简述
   
     
   
 对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、
-标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。
-5. STM32
+标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。如果
+不采取裸机编程，那么将会使用到实时操作系统(RTOS)。
+RTOS具有Linux等操作系统不具有的任务实时性响应机制，具体体现在线程调度机制等方面。
+(a) Keil + 标准库
   
     
   
+(b) Keil + STM32CubeMX + 标准Hal库
+  
+    
+  
+(c) Keil + STM32CubeMX + 标准Hal库 + FreeRTOS
+  
+    
+  
+(d) Clion + ChibiOS + ChibiOS HAL
+  
+    
+  
+5. Metaz战队工具链
+  
+    
+  
+工具链配置教程由Meta战队前项管刘子恺学长倾力打造。
+因为这篇Wiki年代久远，其中有些链接内容可能已经发生错误或者失效。
+在之前的文章中，我们已经安装过MinGW, git, cmake等工具，在根据教程安装工具链时，不要重复安装。
+Meta战队工具链配置教程点击此处。
 6. 课后作业
   
     
   
-"><meta name=application-name content="FixIt"><meta name=apple-mobile-web-app-title content="FixIt"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical href=https://Raventhatfly.github.io/posts/2e8f072/><link rel=prev href=https://Raventhatfly.github.io/posts/bd7db78/><link rel=next href=https://Raventhatfly.github.io/posts/c9bea25/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lecture3","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/Raventhatfly.github.io\/posts\/2e8f072\/"},"genre":"posts","keywords":"meta-teaching","wordcount":48,"url":"https:\/\/Raventhatfly.github.io\/posts\/2e8f072\/","datePublished":"2024-05-15T23:10:16-05:00","dateModified":"2024-05-16T01:16:18-05:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Feiyang Wu"},"description":""}</script></head><body data-header-desktop=sticky data-header-mobile=auto><script>(window.localStorage?.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("data-theme","dark")</script><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper data-github-corner=right><div class=header-title><a href=/ title="Feiyang Wu Personal Page"><span class=header-title-text>Feiyang Wu Personal Page</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Archives</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item has-children"><a class=menu-link href=/><i class="fa-solid fa-list fa-fw fa-sm" aria-hidden=true></i> Info</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/meta-teaching/main/><i class="fa-solid fa-chalkboard fa-fw fa-sm" aria-hidden=true></i> Meta Teaching</a></li></ul></li><li class=menu-item><a class=menu-link href=/profile/><i class="fa-solid fa-house fa-fw fa-sm" aria-hidden=true></i> Profile</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Feiyang Wu Personal Page"><span class=header-title-text>Feiyang Wu Personal Page</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Archives</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/><i class="fa-solid fa-list fa-fw fa-sm" aria-hidden=true></i> Info</a>
-<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/meta-teaching/main/><i class="fa-solid fa-chalkboard fa-fw fa-sm" aria-hidden=true></i> Meta Teaching</a></li></ul></li><li class=menu-item><a class=menu-link href=/profile/><i class="fa-solid fa-house fa-fw fa-sm" aria-hidden=true></i> Profile</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><main class="container container-reverse"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=Collections></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span title=Repost class=icon-repost><i class="fa-solid fa-share fa-fw" aria-hidden=true></i></span><span>Lecture3</span></h1><p class="single-subtitle animate__animated animate__fadeIn">Meta电控培训【第三讲】</p></div><div class=post-meta><div class=post-meta-line><span class=post-author><span class=author><img loading=lazy src=/avatar_img/avatar.jpg alt="Feiyang Wu" data-title="Feiyang Wu" class=avatar style="background:url(/images/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e)'>&nbsp;Feiyang Wu</span></span><span class=post-included-in>&nbsp;included in <a href=/categories/meta-teaching/ class=post-category title="Category - Meta-Teaching"><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> Meta-Teaching</a></span></div><div class=post-meta-line><span title="published on 2024-05-15 23:10:16"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2024-05-15>2024-05-15</time></span>&nbsp;<span title="Updated on 2024-05-16 01:16:18"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2024-05-16>2024-05-16</time></span>&nbsp;<span title="48 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>One minute</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Contents</span>
-<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#1-stm32简介>1. STM32简介</a></li><li><a href=#2-stm32型号与分类>2. STM32型号与分类</a></li><li><a href=#3-stm32-外设>3. STM32 外设</a></li><li><a href=#4-stm32-编程>4. STM32 编程</a></li><li><a href=#5-stm32>5. STM32</a></li><li><a href=#6-课后作业>6. 课后作业</a></li></ul></li></ul></nav></div></div><div class=content id=content><h1 id=stm32基础 class=heading-element><span>STM32基础</span>
+
+继续观看黑马程序员
+按照第五部分教程链接完成工具链配置。
+（可选）自行学习STM32有关知识
+
+
+  
+    
+  
+"><meta name=application-name content="FixIt"><meta name=apple-mobile-web-app-title content="FixIt"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=canonical href=https://Raventhatfly.github.io/posts/2e8f072/><link rel=prev href=https://Raventhatfly.github.io/posts/bd7db78/><link rel=next href=https://Raventhatfly.github.io/posts/c9bea25/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.removeAttribute("onload"),this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Lecture3","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/Raventhatfly.github.io\/posts\/2e8f072\/"},"genre":"posts","keywords":"meta-teaching","wordcount":110,"url":"https:\/\/Raventhatfly.github.io\/posts\/2e8f072\/","datePublished":"2024-05-15T23:10:16-05:00","dateModified":"2024-05-17T01:13:56-05:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Feiyang Wu"},"description":""}</script></head><body data-header-desktop=sticky data-header-mobile=auto><script>(window.localStorage?.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("data-theme","dark")</script><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper data-github-corner=right><div class=header-title><a href=/ title="Feiyang Wu Personal Page"><span class=header-title-text>Feiyang Wu Personal Page</span></a><span class=header-subtitle></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Archives</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item has-children"><a class=menu-link href=/><i class="fa-solid fa-list fa-fw fa-sm" aria-hidden=true></i> Info</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/meta-teaching/main/><i class="fa-solid fa-chalkboard fa-fw fa-sm" aria-hidden=true></i> Meta Teaching</a></li></ul></li><li class=menu-item><a class=menu-link href=/profile/><i class="fa-solid fa-house fa-fw fa-sm" aria-hidden=true></i> Profile</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Feiyang Wu Personal Page"><span class=header-title-text>Feiyang Wu Personal Page</span></a><span class=header-subtitle></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=menu-item><a class=menu-link href=/archives/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Archives</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/><i class="fa-solid fa-list fa-fw fa-sm" aria-hidden=true></i> Info</a>
+<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/meta-teaching/main/><i class="fa-solid fa-chalkboard fa-fw fa-sm" aria-hidden=true></i> Meta Teaching</a></li></ul></li><li class=menu-item><a class=menu-link href=/profile/><i class="fa-solid fa-house fa-fw fa-sm" aria-hidden=true></i> Profile</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><main class="container container-reverse"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=Collections></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span title=Repost class=icon-repost><i class="fa-solid fa-share fa-fw" aria-hidden=true></i></span><span>Lecture3</span></h1><p class="single-subtitle animate__animated animate__fadeIn">Meta电控培训【第三讲】</p></div><div class=post-meta><div class=post-meta-line><span class=post-author><span class=author><img loading=lazy src=/avatar_img/avatar.jpg alt="Feiyang Wu" data-title="Feiyang Wu" class=avatar style="background:url(/images/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e)'>&nbsp;Feiyang Wu</span></span><span class=post-included-in>&nbsp;included in <a href=/categories/meta-teaching/ class=post-category title="Category - Meta-Teaching"><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> Meta-Teaching</a></span></div><div class=post-meta-line><span title="published on 2024-05-15 23:10:16"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden=true></i><time datetime=2024-05-15>2024-05-15</time></span>&nbsp;<span title="Updated on 2024-05-17 01:13:56"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden=true></i><time datetime=2024-05-17>2024-05-17</time></span>&nbsp;<span title="110 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>About 200 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>One minute</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#1-stm32简介>1. STM32简介</a></li><li><a href=#2-stm32型号与分类>2. STM32型号与分类</a></li><li><a href=#3-常用开发工具>3. 常用开发工具</a></li><li><a href=#4-stm32开发方法简述>4. STM32开发方法简述</a></li><li><a href=#5-metaz战队工具链>5. Metaz战队工具链</a></li><li><a href=#6-课后作业>6. 课后作业</a></li><li><a href=#heading></a></li></ul></li></ul></nav></div></div><div class=content id=content><h1 id=stm32基础 class=heading-element><span>STM32基础</span>
 <a href=#stm32%e5%9f%ba%e7%a1%80 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h1><h3 id=1-stm32简介 class=heading-element><span>1. STM32简介</span>
-<a href=#1-stm32%e7%ae%80%e4%bb%8b class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
+<a href=#1-stm32%e7%ae%80%e4%bb%8b class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><h4 id=基础知识 class=heading-element><span>基础知识</span>
+<a href=#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><p><strong>单片机</strong></p><p>单片机（Single-chip microcomputer），是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的微型计算机。与应用在个人计算机中的通用微处理器相比，它更强调自供应（不用外接硬件）和节约成本，集成程度更高，但因为规格已经包含，所能实现的功能也较专一。它的最大优点是体积小，可放在仪表内部，但存储量小，输入输出接口简单。由于其发展非常迅速，旧的定义已不能满足，所以在很多应用场合被称为范围更广的微控制器（microcontroller）。</p><p><strong>STM32</strong></p><p>STM32，是由意法半导体基于 ARM Cortex-M 研制和生产的一系列32位单片机。
 单片机，即微处理器，微处理器（Microprocessor）通常指称一种可编程特殊集
-成电路，其所有组件小型化至一块或数块集成电路内。</p><h4 id=基础知识 class=heading-element><span>基础知识</span>
-<a href=#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li><p>计算机架构：计算机使用的指令集</p><ul><li>计算机常见架构：ARM架构、x86架构</li></ul></li><li><p>外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。
-例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。</p></li></ul><h4 id=常见单片机 class=heading-element><span>常见单片机</span>
+成电路，其所有组件小型化至一块或数块集成电路内。</p><p><strong>其他概念</strong></p><ul><li><p>计算机架构：计算机使用的指令集</p><ul><li>计算机常见架构：ARM架构、x86架构</li></ul></li><li><p>外设：电子计算机中位于机箱之外、能够通电并可以不依赖计算机进行正常的独立或半独立运行的硬件。
+例如STM32中的TIM定时器、通用输入输出（GPIO）、中断控制器等。在现代电脑中可以包括键盘鼠标等。</p></li><li><p>寄存器：
+寄存器（Register）是中央处理器内用来暂存指令、数据和地址的存储器。寄存器的存贮容量有限，读写速度非常快。在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的执行。</p></li></ul><h4 id=常见单片机 class=heading-element><span>常见单片机</span>
 <a href=#%e5%b8%b8%e8%a7%81%e5%8d%95%e7%89%87%e6%9c%ba class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>51系列单片机</li><li>STM32</li><li>ESP32</li></ul><h4 id=stm32组成 class=heading-element><span>STM32组成</span>
 <a href=#stm32%e7%bb%84%e6%88%90 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>ARM Cortex CPU</li><li>外设</li></ul><p><strong>STM32实质上是由ARM提供中央处理器，意法半导体在此基础上设计外设所组成的微处理器。</strong></p><h3 id=2-stm32型号与分类 class=heading-element><span>2. STM32型号与分类</span>
 <a href=#2-stm32%e5%9e%8b%e5%8f%b7%e4%b8%8e%e5%88%86%e7%b1%bb class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p class=custom-center><img loading=lazy src=/figures/stm32_type.png alt=STM32 srcset="/figures/stm32_type.png?size=small, /figures/stm32_type.png?size=medium 1.5x, /figures/stm32_type.png?size=large 2x" data-title=STM32 style="--width:1360px;--aspect-ratio:1360 / 629;background:url(/images/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title;for(const e of["style","data-title","onerror","onload"])this.removeAttribute(e)'></p><p>STM32系列专为要求高性能、低成本、低功耗的嵌入式应用设计的ARM Cortex®-M0，M0+，M3, M4和M7内核  。按内核架构分为不同产品：
 主流产品（STM32F0、STM32F1、STM32F3）、超低功耗产品（STM32L0、STM32L1、STM32L4、STM32L4+）、高性能产品（STM32F2、STM32F4、STM32F7、STM32H7）等。</p><p>STM32最常见型号：STM32F1系列和STM32F4系列。
-RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。</p><h3 id=3-stm32-外设 class=heading-element><span>3. STM32 外设</span>
-<a href=#3-stm32-%e5%a4%96%e8%ae%be class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><h3 id=4-stm32-编程 class=heading-element><span>4. STM32 编程</span>
-<a href=#4-stm32-%e7%bc%96%e7%a8%8b class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、
-标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。</p><h3 id=5-stm32 class=heading-element><span>5. STM32</span>
-<a href=#5-stm32 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><h3 id=6-课后作业 class=heading-element><span>6. 课后作业</span>
-<a href=#6-%e8%af%be%e5%90%8e%e4%bd%9c%e4%b8%9a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><hr class=awesome-hr></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Updated on 2024-05-16 01:16:18">Updated on 2024-05-16&nbsp;</span></div></div><div class=post-info-line><div class=post-info-md><span><a href=/posts/2e8f072/index.md title="Read Markdown" class=link-to-markdown>Read Markdown</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://Raventhatfly.github.io/posts/2e8f072/ data-title=Lecture3><i data-svg-src=/lib/simple-icons/icons/line.min.svg aria-hidden=true></i></a>
+RoboMaster A型开发板和C型开发板都属于STM32F4系列。C型开发板具体型号为STM32F407。</p><h3 id=3-常用开发工具 class=heading-element><span>3. 常用开发工具</span>
+<a href=#3-%e5%b8%b8%e7%94%a8%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><h4 id=开发软件 class=heading-element><span>开发软件</span>
+<a href=#%e5%bc%80%e5%8f%91%e8%bd%af%e4%bb%b6 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>Keil5</li><li>STM32CubeMX</li><li>Clion</li><li>ARM GNU Toolchain (arm-none-eabi编译器)</li><li>Eclipse</li></ul><h4 id=开发软件库 class=heading-element><span>开发软件库</span>
+<a href=#%e5%bc%80%e5%8f%91%e8%bd%af%e4%bb%b6%e5%ba%93 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>CMSIS</li><li>STM32标准库</li><li>STM32标准HAL库</li><li>实时操作系统(FreeRTOS, uCOS, ChibiOS)</li></ul><h4 id=烧录器 class=heading-element><span>烧录器</span>
+<a href=#%e7%83%a7%e5%bd%95%e5%99%a8 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>ST-Link</li><li>JTAG</li></ul><h4 id=debug烧录软件 class=heading-element><span>debug、烧录软件</span>
+<a href=#debug%e7%83%a7%e5%bd%95%e8%bd%af%e4%bb%b6 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><ul><li>OpenOCD</li></ul><h3 id=4-stm32开发方法简述 class=heading-element><span>4. STM32开发方法简述</span>
+<a href=#4-stm32%e5%bc%80%e5%8f%91%e6%96%b9%e6%b3%95%e7%ae%80%e8%bf%b0 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>对于裸机编程（不适用实时操作系统进行线程调度），主要使用三种方法编写代码：直接操作寄存器、
+标准库函数编程（较老）、标准HAL（Hardware Abstraction Layer，硬件抽象层）库。如果
+不采取裸机编程，那么将会使用到实时操作系统(RTOS)。</p><p>RTOS具有Linux等操作系统不具有的任务实时性响应机制，具体体现在线程调度机制等方面。</p><h4 id=a-keil--标准库 class=heading-element><span>(a) Keil + 标准库</span>
+<a href=#a-keil--%e6%a0%87%e5%87%86%e5%ba%93 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><h4 id=b-keil--stm32cubemx--标准hal库 class=heading-element><span>(b) Keil + STM32CubeMX + 标准Hal库</span>
+<a href=#b-keil--stm32cubemx--%e6%a0%87%e5%87%86hal%e5%ba%93 class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><h4 id=c-keil--stm32cubemx--标准hal库--freertos class=heading-element><span>(c) Keil + STM32CubeMX + 标准Hal库 + FreeRTOS</span>
+<a href=#c-keil--stm32cubemx--%e6%a0%87%e5%87%86hal%e5%ba%93--freertos class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><h4 id=d-clion--chibios--chibios-hal class=heading-element><span>(d) Clion + ChibiOS + ChibiOS HAL</span>
+<a href=#d-clion--chibios--chibios-hal class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h4><h3 id=5-metaz战队工具链 class=heading-element><span>5. Metaz战队工具链</span>
+<a href=#5-metaz%e6%88%98%e9%98%9f%e5%b7%a5%e5%85%b7%e9%93%be class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><p>工具链配置教程由Meta战队前项管刘子恺学长倾力打造。
+因为这篇Wiki年代久远，其中有些链接内容可能已经发生错误或者失效。
+在之前的文章中，我们已经安装过MinGW, git, cmake等工具，在根据教程安装工具链时，不要重复安装。</p><p>Meta战队工具链配置教程点击<a href=https://github.com/Meta-Team/Meta-Embedded/wiki/%E5%B7%A5%E5%85%B7%E9%93%BE-%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D target=_blank rel="external nofollow noopener noreferrer">此处</a>。</p><h3 id=6-课后作业 class=heading-element><span>6. 课后作业</span>
+<a href=#6-%e8%af%be%e5%90%8e%e4%bd%9c%e4%b8%9a class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><ul><li>继续观看黑马程序员</li><li>按照第五部分教程链接完成工具链配置。</li><li>（可选）自行学习STM32有关知识</li></ul><h3 id=heading class=heading-element><span></span>
+<a href=#heading class=heading-mark><svg class="octicon octicon-link" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5.0 114.95 4.95l-2.5 2.5a3.5 3.5.0 01-4.95.0.751.751.0 01.018-1.042.751.751.0 011.042-.018 1.998 1.998.0 002.83.0l2.5-2.5a2.002 2.002.0 00-2.83-2.83l-1.25 1.25a.751.751.0 01-1.042-.018.751.751.0 01-.018-1.042zm-4.69 9.64a1.998 1.998.0 002.83.0l1.25-1.25a.751.751.0 011.042.018.751.751.0 01.018 1.042l-1.25 1.25a3.5 3.5.0 11-4.95-4.95l2.5-2.5a3.5 3.5.0 014.95.0.751.751.0 01-.018 1.042.751.751.0 01-1.042.018 1.998 1.998.0 00-2.83.0l-2.5 2.5a1.998 1.998.0 000 2.83z"/></svg></a></h3><hr class=awesome-hr></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="Updated on 2024-05-17 01:13:56">Updated on 2024-05-17&nbsp;</span></div></div><div class=post-info-line><div class=post-info-md><span><a href=/posts/2e8f072/index.md title="Read Markdown" class=link-to-markdown>Read Markdown</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://Raventhatfly.github.io/posts/2e8f072/ data-title=Lecture3><i data-svg-src=/lib/simple-icons/icons/line.min.svg aria-hidden=true></i></a>
 <a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://Raventhatfly.github.io/posts/2e8f072/ data-title=Lecture3><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a>
 <a href=javascript:void(0); title="Share on Myspace" data-sharer=myspace data-url=https://Raventhatfly.github.io/posts/2e8f072/ data-title=Lecture3 data-description><i data-svg-src=/lib/simple-icons/icons/myspace.min.svg aria-hidden=true></i></a>
 <a href=javascript:void(0); title="Share on Blogger" data-sharer=blogger data-url=https://Raventhatfly.github.io/posts/2e8f072/ data-title=Lecture3 data-description><i class="fa-brands fa-blogger fa-fw" aria-hidden=true></i></a>
