@@ -1,4 +1,167 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Meta-Teaching - Tag - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/tags/meta-teaching/</link><description>Meta-Teaching - Tag | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Wed, 15 May 2024 23:10:16 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/tags/meta-teaching/" rel="self" type="application/rss+xml"/><item><title>Lecture3</title><link>https://Raventhatfly.github.io/posts/2e8f072/</link><pubDate>Wed, 15 May 2024 23:10:16 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/2e8f072/</guid><description><![CDATA[<h1 id="stm32基础" class="heading-element"><span>STM32基础</span>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Meta-Teaching - Tag - Feiyang Wu Personal Page</title><link>https://Raventhatfly.github.io/tags/meta-teaching/</link><description>Meta-Teaching - Tag | Feiyang Wu Personal Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>raventhatfly@gmail.com (Feiyang Wu)</managingEditor><webMaster>raventhatfly@gmail.com (Feiyang Wu)</webMaster><lastBuildDate>Mon, 20 May 2024 21:57:59 -0500</lastBuildDate><atom:link href="https://Raventhatfly.github.io/tags/meta-teaching/" rel="self" type="application/rss+xml"/><item><title>Lecture4</title><link>https://Raventhatfly.github.io/posts/b1d97c9/</link><pubDate>Mon, 20 May 2024 21:57:59 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/b1d97c9/</guid><description><![CDATA[<h1 id="stm32结构和原理" class="heading-element"><span>STM32结构和原理</span>
+  <a href="#stm32%e7%bb%93%e6%9e%84%e5%92%8c%e5%8e%9f%e7%90%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>本节有关内容可以详细参见<a href="https://github.com/Meta-Team/Datasheets/blob/master/STM32F4/STM32F4xx%E4%B8%AD%E6%96%87%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf"target="_blank" rel="external nofollow noopener noreferrer">《STM32F4xx中文参考手册》</a>。</p>
+<h3 id="1-stm32架构" class="heading-element"><span>1. STM32架构</span>
+  <a href="#1-stm32%e6%9e%b6%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="普林斯顿冯诺伊曼架构" class="heading-element"><span>普林斯顿(冯·诺伊曼)架构</span>
+  <a href="#%e6%99%ae%e6%9e%97%e6%96%af%e9%a1%bf%e5%86%af%e8%af%ba%e4%bc%8a%e6%9b%bc%e6%9e%b6%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/figures/lecture4/Von_Neumann_Architecture.svg.png?size=large" data-thumbnail="/figures/lecture4/Von_Neumann_Architecture.svg.png?size=small" data-sub-html="<h2>普林斯顿（冯·诺伊曼结构）</h2>"><img loading="lazy" src="/figures/lecture4/Von_Neumann_Architecture.svg.png" alt="/figures/lecture4/Von_Neumann_Architecture.svg.png" srcset="/figures/lecture4/Von_Neumann_Architecture.svg.png?size=small, /figures/lecture4/Von_Neumann_Architecture.svg.png?size=medium 1.5x, /figures/lecture4/Von_Neumann_Architecture.svg.png?size=large 2x" data-title="/figures/lecture4/Von_Neumann_Architecture.svg.png" height="300" style="--width: 2560px;--aspect-ratio: 2560 / 1481;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">普林斯顿（冯·诺伊曼结构）</figcaption>
+  </figure>
+<p>组成部分：输入设备、输出设备、存储单元、算数逻辑单元、控制单元。</p>
+<h4 id="哈佛结构" class="heading-element"><span>哈佛结构</span>
+  <a href="#%e5%93%88%e4%bd%9b%e7%bb%93%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>哈佛结构是一种将程序指令存储和数据存储分开的存储器结构，它的主要特点是将程序和数据存储在不同的存储空间中，即程序存储器和数据存储器是两个独立的存储器，每个存储器独立编址、独立访问，目的是为了减轻程序运行时的访存瓶颈。</p>
+<p><strong>重要特点：指令（代码）和数据存储分开</strong></p>
+<p>所以一般会有指令I(Instruction)总线和数据D(data)总线的之分。</p>
+<h4 id="stm32f4型号架构" class="heading-element"><span>STM32F4型号架构</span>
+  <a href="#stm32f4%e5%9e%8b%e5%8f%b7%e6%9e%b6%e6%9e%84" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><figure><a class="lightgallery" href="/figures/lecture4/stm32_arch.png?size=large" data-thumbnail="/figures/lecture4/stm32_arch.png?size=small" data-sub-html="<h2>STM32F4x架构</h2>"><img loading="lazy" src="/figures/lecture4/stm32_arch.png" alt="/figures/lecture4/stm32_arch.png" srcset="/figures/lecture4/stm32_arch.png?size=small, /figures/lecture4/stm32_arch.png?size=medium 1.5x, /figures/lecture4/stm32_arch.png?size=large 2x" data-title="/figures/lecture4/stm32_arch.png" height="400" style="--width: 830px;--aspect-ratio: 830 / 555;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">STM32F4x架构</figcaption>
+  </figure>
+<h3 id="2-stm32外设" class="heading-element"><span>2. STM32外设</span>
+  <a href="#2-stm32%e5%a4%96%e8%ae%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="如何组装一台电脑" class="heading-element"><span>如何组装一台电脑？</span>
+  <a href="#%e5%a6%82%e4%bd%95%e7%bb%84%e8%a3%85%e4%b8%80%e5%8f%b0%e7%94%b5%e8%84%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>首先我们得先拥有一块主板（包含了我们的CPU）。
+然后，我们得有显示屏、键盘、扬声器。我们还得装显卡、声卡、无线网卡……</p>
+<p>对于STM32等微处理器，显示屏、键盘、无线上网不是必须的。
+未了实现不同的功能，我们的STM32需要完成一些基本功能，例如：</p>
+<ul>
+<li>引出一些引脚，我可以控制是高电平还是低电平</li>
+<li>添加一个USB串口，可以与电脑通信</li>
+<li>一个定时器，在我需要的时候进行计时功能</li>
+<li>……</li>
+</ul>
+<h4 id="如何制造一个stm32" class="heading-element"><span>如何制造一个STM32？</span>
+  <a href="#%e5%a6%82%e4%bd%95%e5%88%b6%e9%80%a0%e4%b8%80%e4%b8%aastm32" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>采用什么CPU？ARM Cortex系列中央处理器。</p>
+<p>配置哪些硬件？由意法半导体为我们完成并封装到STM32中。
+外设，类似于组装电脑时的无线网卡、显卡、声卡等硬件。</p>
+<h4 id="那么如果我想自定义硬件外设怎么办" class="heading-element"><span>那么如果我想自定义硬件（外设）怎么办？</span>
+  <a href="#%e9%82%a3%e4%b9%88%e5%a6%82%e6%9e%9c%e6%88%91%e6%83%b3%e8%87%aa%e5%ae%9a%e4%b9%89%e7%a1%ac%e4%bb%b6%e5%a4%96%e8%ae%be%e6%80%8e%e4%b9%88%e5%8a%9e" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>使用硬件描述语言生成半定制电路。可以使用FPGA。</p>
+<h4 id="如何使用代码来操作外设" class="heading-element"><span>如何使用代码来操作外设？</span>
+  <a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%a0%81%e6%9d%a5%e6%93%8d%e4%bd%9c%e5%a4%96%e8%ae%be" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>如果使用显卡，那么我需要显卡驱动。</p>
+<p>如果使用摄像头，那么我需要摄像头驱动。</p>
+<p>如果使用Wifi，那么我需要网卡驱动……</p>
+<p>如果使用外设，我需要<del>外设驱动</del><strong>硬件抽象层</strong>（Hardware Abstraction Layer，HAL）。
+应尽抽象层将硬件方面的不同抽离操作系统的核心，核心模式的代码就不必因为硬件的不同而需要修改。因此硬件抽象层可加大软件的移植性。</p>
+<h4 id="硬件抽象层底层逻辑" class="heading-element"><span>硬件抽象层底层逻辑</span>
+  <a href="#%e7%a1%ac%e4%bb%b6%e6%8a%bd%e8%b1%a1%e5%b1%82%e5%ba%95%e5%b1%82%e9%80%bb%e8%be%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>历史上，总共有两种办法来操作这些设备。
+这些硬件外设设备其本质都是为了输入、输出，因此它们都是输入输出设备（IO设备,Input,Ouput）。</p>
+<p><strong>第一种方法</strong>，是设计专门的汇编命令。如x86汇编就保留了专门用来输入输出的指令。但是随着现代计算机中出现了越来越多不同的新设备，这种设计专门指令的方法也开始落伍。</p>
+<p><strong>第二种方法</strong>，叫做内存地址映射 IO（Memory Mapped IO）。这种方法也是大部分现代计算机所采用的输入输出的办法。</p>
+<p>让我们回到硬件抽象层的概念。</p>
+<p>硬件抽象层还是没有接触最底层的原理，因为硬件抽象层毕竟也是用代码写出来的。所以如果我想写硬件抽象层怎么办？</p>
+<p><strong>——寄存器操作</strong></p>
+<p>把寄存器当成电闸开关。当我想让一个房间的电灯亮起来，只需要拨动开关；类似的，当我要启用某一种功能，比如说让STM32的某一个引脚变成高电平，我只需要将寄存器的某一位设置为1。</p>
+<p>或者说我可以用寄存器表示一种模式或功能。假设我的房间的灯有三种颜色，红、绿、蓝。我用00表示红，01表示绿，10表示蓝。</p>
+<p>STM32的寄存器主要存在于两种地方： <strong>ARM Cortex内核里的寄存器</strong>。我们不需要显示地去操作它（除非编写汇编语言）。这些寄存器是和C语言编译完成之后的汇编语言较为相关。 <strong>挂接于总线上的寄存器</strong>。
+假设系统有一块32kB的内存（位于0x0000 ~ 0x8000的位置）。这意味着不能访问0x9000的位置么？不是的。32位机的寻址能力是2^32。</p>
+<p>我们可以把寄存器对应到一个空闲的地址上，然后在C语言中使用指针的方式进行读写！
+这样，寄存器的表现就仿佛是一块内存，同时，寄存器的具体值又定义了硬件外设的行为。我们可以通过改变寄存器中的值，来控制和访问外设。</p>
+<p>这就是内存地址映射IO的方法。</p>
+<p>现在假设一个控制LED灯点亮的寄存器，被映射到了0x9000的地址上，寄存器的最低位（第0位）位1的时候，LED灯可以被点亮。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#define REG_ADDRESS 0x9000
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">volatile</span> <span class="kt">uint32_t</span><span class="o">*</span> <span class="n">peripheral_register</span> <span class="o">=</span> <span class="n">REG_ADDRESS</span><span class="p">;</span> <span class="c1">// Volatile 关键字：防止编译器优化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">*</span><span class="n">peripheral_register</span> <span class="o">|=</span> <span class="mh">0x0001</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>STM32中外设众多，没有每个外设寄存器与地址的直接对应表，很多时候这些映射地址需要经过复杂的计算才能得出。而且，STM32还有位带操作等概念。
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content"><ol>
+<li>不建议直接操作寄存器控制外设。请使用现存的库函数或硬件抽象层。</li>
+<li>上述操作寄存器的方式只是一个例子，不代表真实可用的代码。</li>
+<li>STM32位带操作可以将寄存器的每个bit膨胀为4字节，但仍是最低位有效。这个映射机制叫做位带操作。</li>
+</ol>
+</div>
+    </div>
+  </div></p>
+<h3 id="3-stm32时钟树" class="heading-element"><span>3. STM32时钟树</span>
+  <a href="#3-stm32%e6%97%b6%e9%92%9f%e6%a0%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="时钟" class="heading-element"><span>时钟</span>
+  <a href="#%e6%97%b6%e9%92%9f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>时钟信号就是计算机的脉搏，寄存器等时序逻辑器件依赖时钟的上升沿和下降沿运作。
+时钟频率越高，计算机的运算能力越强，功耗也越大。为了平衡运算能力与工号，STM32设计了非常复杂的时钟系统。</p>
+<h5 id="时钟的作用同步和时间测量" class="heading-element"><span>时钟的作用：同步和时间测量。</span>
+  <a href="#%e6%97%b6%e9%92%9f%e7%9a%84%e4%bd%9c%e7%94%a8%e5%90%8c%e6%ad%a5%e5%92%8c%e6%97%b6%e9%97%b4%e6%b5%8b%e9%87%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><p><strong>同步</strong>：时钟信号用于同步计算机中所有组件的操作，包括CPU、内存、输入/输出设备等。通过提供一致的时间基准，时钟确保了不同组件之间的协调和有序运行。</p>
+<p><strong>时间测量</strong>：时钟提供了时间测量的基础。通过计数时钟周期，计算机可以测量和记录时间，从而支持各种时间相关功能，如时间戳、计时器和计数器等。</p>
+<h4 id="stm32时钟源" class="heading-element"><span>STM32时钟源</span>
+  <a href="#stm32%e6%97%b6%e9%92%9f%e6%ba%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>STM32的时钟源总共有四种，低速外部时钟，低速内部时钟，高速外部时钟，告诉内部时钟。内部时钟一般较频率较低且较不稳定，
+外部时钟使用晶体振荡器，会更为稳定。
+<figure><a class="lightgallery" href="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png?size=large" data-thumbnail="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png?size=small" data-sub-html="<h2>STM32F4x时钟树</h2>"><img loading="lazy" src="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png" alt="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png" srcset="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png?size=small, /figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png?size=medium 1.5x, /figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png?size=large 2x" data-title="/figures/lecture4/%E6%97%B6%E9%92%9F%E6%A0%91.png" height="700" style="--width: 496px;--aspect-ratio: 496 / 654;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">STM32F4x时钟树</figcaption>
+  </figure></p>
+<p><strong>常用概念</strong></p>
+<p>分频器（DIV）：将时钟频率除以一定的倍数。</p>
+<p>PLL倍频锁相环（倍频器）：将时钟频率乘以一定的倍数。</p>
+<p>通过复杂的时钟配置，最终可以确定各个模块的时钟频率。</p>
+<h3 id="4-通用输入输出gpio" class="heading-element"><span>4. 通用输入输出GPIO</span>
+  <a href="#4-%e9%80%9a%e7%94%a8%e8%be%93%e5%85%a5%e8%be%93%e5%87%bagpio" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>GPIO(General Purpose Input Ouput, 通用目的输入输出)外设是STM32最基本的外设之一。学习GPIO是学习其他一切外设的基础。
+GPIO分为端口（Port）若干，编号为ABCD……
+每个端口分别对应16个引脚（Pin）
+例如：GPIOA Pin10, GPIOB Pin 2, GPIOC Pin3 ……
+对于每个GPIOx, 都有9个寄存器控制。
+分别为：</p>
+<p><strong>GPIO 端口模式寄存器</strong>、
+<strong>GPIO 端口输出类型寄存器</strong>、
+<strong>GPIO 端口输出速度寄存器</strong>、
+<strong>GPIO 端口上拉/下拉寄存器</strong>、
+<strong>GPIO 端口输入数据寄存器</strong>、
+<strong>GPIO 端口输出数据寄存器</strong>、
+<strong>GPIO 端口置位/复位寄存器</strong>、
+<strong>GPIO 复用功能低位寄存器</strong>、
+<strong>GPIO 复用功能高位寄存器</strong>。</p>
+<p><figure><a class="lightgallery" href="/figures/lecture4/gpio.png?size=large" data-thumbnail="/figures/lecture4/gpio.png?size=small" data-sub-html="<h2>GPIO原理图</h2>"><img loading="lazy" src="/figures/lecture4/gpio.png" alt="/figures/lecture4/gpio.png" srcset="/figures/lecture4/gpio.png?size=small, /figures/lecture4/gpio.png?size=medium 1.5x, /figures/lecture4/gpio.png?size=large 2x" data-title="/figures/lecture4/gpio.png" height="400" style="--width: 740px;--aspect-ratio: 740 / 448;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">GPIO原理图</figcaption>
+  </figure>
+有关寄存器的详细用法和资料，请查阅<a href="https://github.com/Meta-Team/Datasheets/blob/master/STM32F4/STM32F4xx%E4%B8%AD%E6%96%87%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf"target="_blank" rel="external nofollow noopener noreferrer">《STM32F4xx中文参考手册》</a>。</p>]]></description></item><item><title>Lecture3</title><link>https://Raventhatfly.github.io/posts/2e8f072/</link><pubDate>Wed, 15 May 2024 23:10:16 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/2e8f072/</guid><description><![CDATA[<h1 id="stm32基础" class="heading-element"><span>STM32基础</span>
   <a href="#stm32%e5%9f%ba%e7%a1%80" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
