@@ -38,6 +38,9 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 * Course Project ECE385, Xilinx Spartan-7 FPGA based Plants vs. Zombie Game
 * Data Collection and Labelling for CVPR2024 accepted paper:  [Moviechat-1k dataset](https://huggingface.co/datasets/Enxin/MovieChat-1K_train)
 
+# Standardized Assessment
+* TOEFL: 111 (Reading 30, Listening 30, Speaking 27, Writing 24)
+* GRE: 335&#43;3.5 (Verbal 165, Math 170)
 # Awards and Papers
 * 2021-2022 and 2022-2023 National Scholarship (国家奖学金)
 * 2021-2022 and 2022-2023, First Prize Scholarship of Zhejiang University (浙江大学一等奖学金)
