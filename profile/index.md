@@ -49,10 +49,21 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 * Co-author of CVPR2024 accepted paper _MovieChat: From Dense Token to Sparse Memory for Long Video Understanding_, with the role of data collection and labeling.
 [View Paper](https://arxiv.org/abs/2307.16449)
 
+
 ###
 
 ---
 {.awesome-hr}
+
+[//]: # (### Profile Download)
+
+[//]: # ([Chinese Version]&amp;#40;/files/profile/resume_zh_CN.pdf&amp;#41;)
+
+[//]: # ()
+[//]: # (###)
+
+[//]: # (---)
+
 
 
 
