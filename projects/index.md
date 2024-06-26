@@ -1,6 +1,9 @@
 # Friends
 
 
+---
+{.awesome-hr}
+
 
 ---
 
