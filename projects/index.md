@@ -1,8 +1,7 @@
-# Friends
-
+# My Projects
 
 ---
-{.awesome-hr}
+
 
 
 ---
