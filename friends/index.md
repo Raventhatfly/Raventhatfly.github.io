@@ -1,8 +1,10 @@
 # Friends
 
 
-----
-{.awesome-hr}
+
+---
+![](/cover/friends_cover.png)
+---
 
 
 

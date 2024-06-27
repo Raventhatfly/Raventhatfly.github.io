@@ -1,6 +1,7 @@
-# 我的Bilibili Vlog
+# My Bilibili Vlog
 
 ---
+![](/cover/vlog_cover.png)
 # 欢迎来到我的Vlog主页！
 
 ### 1. 余杭高级中学一班二班纪念视频 
