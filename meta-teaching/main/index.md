@@ -4,13 +4,25 @@
 
 {{&lt; figure src=&#34;/avatar_img/meta_light.png&#34; height=&#34;100px&#34;&gt;}}
 
+[//]: # ({{&lt; svg name=&#34;zju&#34; size=100 &gt;}})
+
+[//]: # ({.float-left})
+
+[//]: # ({{&lt; svg name=&#34;uiuc&#34; size=90 &gt;}})
+
+[//]: # ({.custom-float-left})
+
 ---
+
 ### 电控组 :(fa-solid fa-laptop-code):
+
 欢迎来到ZJU-UIUC Robomaster Meta 战队电控组教学主页！
 
 战队电控[Wiki](https://github.com/Meta-Team/Meta-Embedded/wiki)
 
 战队电控github[仓库](https://github.com/Meta-Team/Meta-Embedded/)
+
+
 
 ---
 {.awesome-hr}

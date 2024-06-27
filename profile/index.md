@@ -1,10 +1,13 @@
 # Feiyang Wu 邬飞扬
 
 
+
+
 # About Me
 
 ![](/avatar_img/avatar300.jpg)
 {.custom_avatar}
+
 
 Welcome to my personal website!
 
@@ -20,6 +23,10 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 * Yuhang High School (杭州市余杭高级中学) --- High School Degree
 * Zhejiang University (浙江大学) --- Enrolled Undergraduate Student
 * Univeristy of Illinois Urbana Champaign (UIUC) --- Enrolled Undergraduate Student
+
+[//]: # ({{&lt; svg name=&#34;zju&#34; size=100 &gt;}})
+
+[//]: # ({.custom-float-right})
 
 # Research Interest and Skills
 * Embedded System Programming Based on STM32
