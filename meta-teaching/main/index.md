@@ -4,6 +4,10 @@
 
 {{&lt; figure src=&#34;/avatar_img/meta_light.png&#34; height=&#34;100px&#34;&gt;}}
 
+
+
+[//]: # ({{&lt; figure src=&#34;figures/meta/img.png&#34;&gt;}})
+
 [//]: # ({{&lt; svg name=&#34;zju&#34; size=100 &gt;}})
 
 [//]: # ({.float-left})
@@ -13,6 +17,7 @@
 [//]: # ({.custom-float-left})
 
 ---
+
 
 ### 电控组 :(fa-solid fa-laptop-code):
 
@@ -66,6 +71,13 @@
 
 ---
 {.awesome-hr}
+###
+
+{{&lt; center-quote&gt;}}
+**——初心高于胜负，成长胜于输赢**
+{{&lt;/center-quote&gt;}}
+
+![](/figures/meta/background.jpg)
 
 ###
 
