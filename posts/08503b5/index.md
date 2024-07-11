@@ -59,14 +59,14 @@ self.mask_out_even[::2,:] = torch.eye(5).clone()
 \[ w =
 
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; \dots 0 \\
-0 &amp; 0 &amp; 0 &amp; \dots 0 \\
-0 &amp; 1 &amp; 0 &amp; \dots 0 \\
-0 &amp; 0 &amp; 0 &amp; \dots 0 \\
-0 &amp; 0 &amp; 1 &amp; \dots 0 \\
+1 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \dots &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \dots &amp; 0 \\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; \dots 1 \\
-0 &amp; 0 &amp; 0 &amp; \dots 0 \\
+0 &amp; 0 &amp; 0 &amp; \dots &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
 \end{bmatrix}
 
 
@@ -75,6 +75,52 @@ self.mask_out_even[::2,:] = torch.eye(5).clone()
 
 {{&lt; raw &gt;}} 对于矩阵B(\(100\times30\))我变成\(100\times60\)的矩阵的偶数列，在奇数列补0，我只要乘上矩阵\(w\)的转置\(w^T\)即可。{{&lt; /raw &gt;}}
 这个方法可以成功解决Pytorch对inplace操作不可反向传播的报错。
+
+### 4. 原始STBP
+原始的LIF模型：
+{{&lt; raw &gt;}}
+\[
+x_i^{t&#43;1,n} = \sum_{j=1}^{l(n-1)}w_{ij}^{n}o_j^{t&#43;1,n-1} \\
+u_i^{t&#43;1,n} = u_i^{t,n}\tau e^{-\frac{o_i^{t,n}}{\tau}} &#43; x_i^{t&#43;1,n}&#43;b_i^n \\
+o_i^{t&#43;1,n} = f(u_i^{t&#43;1,n})
+\]
+{{&lt; /raw &gt;}}
+{{&lt; raw &gt;}}
+同时：
+\[
+f(x) = \begin{cases} 
+1 &amp;  x \geq u_{th} \\
+0 &amp;  x &lt; u_{th}
+\end{cases} \]
+{{&lt; /raw &gt;}}
+STBP的反向传播公式满足：
+
+{{&lt; raw &gt;}}
+\begin{align*}
+\frac{\partial L}{\partial \mathbf{o}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n&#43;1}}\frac{\partial \mathbf{o}^{t,n&#43;1}}{\mathbf{o}^{t,n}}&#43;\frac{\partial L}{\partial \mathbf{o}^{t&#43;1,n}}\frac{\partial \mathbf{o}^{t&#43;1,n}}{\mathbf{o}^{t,n}}\\
+&amp;= (\mathbf{W}^{n&#43;1})^T \frac{\partial L}{\partial \mathbf{u}^{t,n&#43;1}} - e^{-\frac{dt}{\tau}} \frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}} \circ (1-\mathbf{o}^{t,n})\\
+\frac{\partial L}{\partial \mathbf{u}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}} \frac{\partial \mathbf{o}^{t,n}}{\partial \mathbf{u}^{t,n}} &#43; \frac{\partial L}{\partial \mathbf{o}^{t&#43;1,n}}\frac{\partial \mathbf{o}^{t&#43;1,n}}{\partial \mathbf{u}^{t,n}}\\
+&amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}} \circ f&#39; &#43; e^{-\frac{dt}{\tau}}\frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}} \circ (1-\mathbf{o}^{t,n})
+\end{align*}
+{{&lt; /raw &gt;}}
+
+### 5. 更新后的反向传播
+{{&lt; raw &gt;}}
+当t为偶数时：
+\begin{align*}
+\frac{\partial L}{\partial \mathbf{u}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}}\frac{\partial \mathbf{o}^{t,n}}{\partial \mathbf{u}^{t,n}}&#43;\frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}}\frac{\partial \mathbf{u}^{t&#43;1,n}}{\partial \mathbf{u}^{t,n}} \\
+&amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}} \mathbf{M}_{even}^T \circ f&#39;&#43;\frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}}e^{-\frac{dt}{\tau}} \circ (1 - \mathbf{o}^{t-1,n}\mathbf{M}_{even})\\
+\frac{\partial L}{\partial \mathbf{o}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n&#43;1}}\frac{\partial \mathbf{o}^{t,n&#43;1}}{\partial \mathbf{o}^{t,n}}&#43;\frac{\partial L}{\partial \mathbf{o}^{t&#43;1,n}}\frac{\partial \mathbf{o}^{t&#43;1,n}}{\partial \mathbf{o}^{t,n}}\\
+&amp;= (\mathbf{W}^{n&#43;1})^T \mathbf{M}_{even}\frac{\partial L}{\partial \mathbf{u}^{t,n&#43;1}} - e^{-\frac{dt}{\tau}} \frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}} \circ (1-\mathbf{o}^{t,n}\mathbf{M_{even}})
+\end{align*}
+当t为奇数时：
+\begin{align*}
+\frac{\partial L}{\partial \mathbf{u}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}}\frac{\partial \mathbf{o}^{t,n}}{\partial \mathbf{u}^{t,n}}&#43;\frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}}\frac{\partial \mathbf{u}^{t&#43;1,n}}{\partial \mathbf{u}^{t,n}} \\
+&amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n}} \mathbf{M}_{odd}^T \circ f&#39;&#43;\frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}}e^{-\frac{dt}{\tau}} \circ (1 - \mathbf{o}^{t-1,n}\mathbf{M}_{odd})\\
+\frac{\partial L}{\partial \mathbf{o}^{t,n}} &amp;= \frac{\partial L}{\partial \mathbf{o}^{t,n&#43;1}}\frac{\partial \mathbf{o}^{t,n&#43;1}}{\partial \mathbf{o}^{t,n}}&#43;\frac{\partial L}{\partial \mathbf{o}^{t&#43;1,n}}\frac{\partial \mathbf{o}^{t&#43;1,n}}{\partial \mathbf{o}^{t,n}}\\
+&amp;= (\mathbf{W}^{n&#43;1})^T \mathbf{M}_{odd}\frac{\partial L}{\partial \mathbf{u}^{t,n&#43;1}} - e^{-\frac{dt}{\tau}} \frac{\partial L}{\partial \mathbf{u}^{t&#43;1,n}} \circ (1-\mathbf{o}^{t,n}\mathbf{M_{odd}})
+\end{align*}
+{{&lt; /raw &gt;}}
 
 ---
 
