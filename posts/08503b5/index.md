@@ -104,6 +104,15 @@ STBP的反向传播公式满足：
 \end{align*}
 {{&lt; /raw &gt;}}
 
+权重的梯度可以采用如下公式进行计算：
+{{&lt; raw &gt;}}
+
+\begin{align*}
+\frac{\partial L}{\partial \mathbf{b}^n}&amp;=\sum_{t=1}^{T}\frac{\partial L}{\partial \mathbf{u}^{t,n}}\\
+\frac{\partial L}{\partial \mathbf{W}^n}&amp;=\sum_{t=1}^{T}\frac{\partial L}{\partial \mathbf{u}^{t,n}}{\mathbf{o}^{t,n-1}}^T
+\end{align*}
+
+{{&lt; /raw &gt;}}
 ### 5. 更新后的反向传播
 {{&lt; raw &gt;}}
 当t为偶数时：
