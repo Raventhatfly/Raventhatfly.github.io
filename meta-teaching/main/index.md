@@ -19,13 +19,15 @@
 ---
 
 
-### 电控组 :(fa-solid fa-laptop-code):
+### 软件组 :(fa-solid fa-laptop-code):
 
 欢迎来到ZJU-UIUC Robomaster Meta 战队电控组教学主页！
 
 战队电控[Wiki](https://github.com/Meta-Team/Meta-Embedded/wiki)
 
 战队电控github[仓库](https://github.com/Meta-Team/Meta-Embedded/)
+
+战队ROS仓库github[仓库](https://github.com/Meta-Team/Meta-Ros/)
 
 
 
@@ -54,6 +56,8 @@
 {.awesome-hr}
 
 ### 作业 :(fa-solid fa-file-pen):
+
+:(fa-brands fa-github): 作业代码发布仓库点击[此处](https://github.com/Meta-Team/Meta-Software-Teaching)
 
 | 课程       | 作业内容                    | 截止日期      |
 |----------|-------------------------|-----------|

@@ -614,18 +614,18 @@ Cmake来生成Makefile。</p>
 <li>使用Makefile和Cmake成功编译文件。</li>
 <li>继续观看黑马程序员教学视频。</li>
 </ul>
-<hr class="awesome-hr">]]></description></item><item><title>Lecture1</title><link>https://Raventhatfly.github.io/posts/574de11/</link><pubDate>Sun, 12 May 2024 23:10:35 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/574de11/</guid><description><![CDATA[<h2 id="欢迎来到meta战队电控组" class="heading-element"><span>欢迎来到Meta战队电控组</span>
-  <a href="#%e6%ac%a2%e8%bf%8e%e6%9d%a5%e5%88%b0meta%e6%88%98%e9%98%9f%e7%94%b5%e6%8e%a7%e7%bb%84" class="heading-mark">
+<hr class="awesome-hr">]]></description></item><item><title>Lecture1</title><link>https://Raventhatfly.github.io/posts/574de11/</link><pubDate>Sun, 12 May 2024 23:10:35 -0500</pubDate><author>Feiyang Wu</author><guid>https://Raventhatfly.github.io/posts/574de11/</guid><description><![CDATA[<h2 id="预习内容" class="heading-element"><span>预习内容</span>
+  <a href="#%e9%a2%84%e4%b9%a0%e5%86%85%e5%ae%b9" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h3 id="1-预习内容" class="heading-element"><span>1. 预习内容</span>
-  <a href="#1-%e9%a2%84%e4%b9%a0%e5%86%85%e5%ae%b9" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：<a href="https://code.visualstudio.com/"target="_blank" rel="external nofollow noopener noreferrer">https://code.visualstudio.com/</a>。</p>
+</h2><p>C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：<a href="https://code.visualstudio.com/"target="_blank" rel="external nofollow noopener noreferrer">https://code.visualstudio.com/</a>。</p>
 <p>第一讲大家请自行学习P1~P24有关章节的知识。</p>
-<p>黑马程序员课程链接点击<a href="https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177"target="_blank" rel="external nofollow noopener noreferrer">此处</a>。</p>
-<h3 id="2-linux基本操作" class="heading-element"><span>2. Linux基本操作</span>
+<p>黑马程序员课程链接点击<a href="https://www.bilibili.com/video/BV1ZH4y137ws?p=1&amp;vd_source=b710c0374cb950d2cc5713ef9df39177"target="_blank" rel="external nofollow noopener noreferrer">此处</a>。</p>
+<h2 id="基本工具的安装" class="heading-element"><span>基本工具的安装</span>
+  <a href="#%e5%9f%ba%e6%9c%ac%e5%b7%a5%e5%85%b7%e7%9a%84%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="2-linux基本操作" class="heading-element"><span>2. Linux基本操作</span>
   <a href="#2-linux%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -725,7 +725,9 @@ VPN下载：<a href="https://answers.uillinois.edu/illinois/98773"target="_blank
   <a href="#5-git%e5%92%8cgithub" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>对于MacOS用户：</p>
+</h3><p>什么是git? Git是由Linux之父开发的开源项目，用于代码项目的版本管理。Git是一个非常强大的工具，
+工业界有很多项目都是由git进行版本控制和管理的。</p>
+<p>对于MacOS用户：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -743,7 +745,25 @@ VPN下载：<a href="https://answers.uillinois.edu/illinois/98773"target="_blank
 </div>
 </div><p>对于Windows用户：git安装点击<a href="https://git-scm.com/downloads"target="_blank" rel="external nofollow noopener noreferrer">此处</a>。
 Windows用户下载文件后，如果没有自动添加环境变量则需手动添加环境变量。</p>
-<h3 id="6-c语言基础语法" class="heading-element"><span>6. C语言基础语法</span>
+<p>那么Github又是什么？Github是基于git的一个开源代码管理平台。其他类似的平台还有Gitlab以及国内的Gitee。
+我们都可以使用git工具进行代码的上传、下载以及合并。</p>
+<p>Git克隆：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone &lt;url&gt;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如要克隆一个我们队伍的<code>Meta-Ros</code>项目，我们可以输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/Meta-Team/Meta-ROS.git</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6-c语言基础语法" class="heading-element"><span>6. C语言基础语法</span>
   <a href="#6-c%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>

@@ -1,12 +1,14 @@
 # Lecture1
 
-## 欢迎来到Meta战队电控组
-### 1. 预习内容
+## 预习内容
 C 语言：B站黑马程序员（不建议下载使用Visual Studio，我们将不会用到它。如果教程用到了Clion，可以先开始下载。这次不做要求。推荐使用 Vscode,我们前期将使用gcc编译器进行编译C语言代码。Vscode安装参见：[https://code.visualstudio.com/](https://code.visualstudio.com/)。
 
 第一讲大家请自行学习P1~P24有关章节的知识。
 
-黑马程序员课程链接点击[此处](https://www.bilibili.com/video/BV1Xa4y1k7LU?p=14&amp;vd_source=b710c0374cb950d2cc5713ef9df39177)。
+黑马程序员课程链接点击[此处](https://www.bilibili.com/video/BV1ZH4y137ws?p=1&amp;vd_source=b710c0374cb950d2cc5713ef9df39177)。
+
+## 基本工具的安装
+
 ### 2. Linux基本操作
 
 ##### (a) 终端
@@ -129,6 +131,8 @@ VPN下载：[https://answers.uillinois.edu/illinois/98773](https://answers.uilli
 
 ### 5. git和github
 
+什么是git? Git是由Linux之父开发的开源项目，用于代码项目的版本管理。Git是一个非常强大的工具，
+工业界有很多项目都是由git进行版本控制和管理的。
 
 对于MacOS用户：
 ```shell
@@ -141,6 +145,17 @@ sudo apt install git
 对于Windows用户：git安装点击[此处](https://git-scm.com/downloads)。
 Windows用户下载文件后，如果没有自动添加环境变量则需手动添加环境变量。
 
+那么Github又是什么？Github是基于git的一个开源代码管理平台。其他类似的平台还有Gitlab以及国内的Gitee。
+我们都可以使用git工具进行代码的上传、下载以及合并。
+
+Git克隆：
+```shell
+git clone &lt;url&gt;
+```
+例如要克隆一个我们队伍的`Meta-Ros`项目，我们可以输入：
+```shell
+git clone https://github.com/Meta-Team/Meta-ROS.git
+```
 ### 6. C语言基础语法
 自行查阅预习内容。应掌握的内容为：P1-P24
 应掌握的概念：注释、常量、关键字、变量、字符类型、标识符、数据类型、if语句
