@@ -1,18 +1,27 @@
 # Useful Links
 
 
-### ZJU &amp; UIUC Schol Work
-* [Black Board](https://learn.intl.zju.edu.cn)
-* [Campuswire](https://campuswire.com/)
-* [ECE408 Slides](https://zjuintl-my.sharepoint.com/personal/kindrv_intl_zju_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkindrv%5Fintl%5Fzju%5Fedu%5Fcn%2FDocuments%2FFL24%2DECE408%2Fshared%20with%20students&amp;ga=1)
+---
 
-### CS Skills
+### ZJU &amp; UIUC Schol Work :(fa-solid fa-school):
+[Black Board](https://learn.intl.zju.edu.cn)   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;     [Campuswire](https://campuswire.com/)   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+[ECE408 Slides](https://zjuintl-my.sharepoint.com/personal/kindrv_intl_zju_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkindrv%5Fintl%5Fzju%5Fedu%5Fcn%2FDocuments%2FFL24%2DECE408%2Fshared%20with%20students&amp;ga=1)
+
+---
+
+### CS Skills :(fa-solid fa-computer):
 #### HMTL &amp; CSS 
-* [Codepen](https://codepen.io/)
+[Codepen](https://codepen.io/)
 
-### My Robotics Reseach
-* [Umi Leg](https://umi-on-legs.github.io/)
-* [Umi Gripper](https://umi-gripper.github.io/)
+--- 
+
+### My Robotics Reseach :(fa-solid fa-robot):
+[Umi Leg](https://umi-on-legs.github.io/)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[Umi Gripper](https://umi-gripper.github.io/)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[ReKep](https://rekep-robot.github.io/)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[Aloha](https://aloha-unleashed.github.io/)
+
+### Useful Tools :(fa-solid fa-tools):
+* []()
+![breif.png](/figures/brief.png)
 
 
 ---
