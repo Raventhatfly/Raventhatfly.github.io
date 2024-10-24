@@ -36,21 +36,21 @@
 
 ### 教学内容 :(fa-solid fa-folder-open):
 
-| 课程                          | 内容描述            | 文件                                                  |
-|-----------------------------|-----------------|-----------------------------------------------------|
+| 课程   | 内容描述            | 文件                                            |
+|------|-----------------|-----------------------------------------------|
 | [Lecture1](/posts/574de11/) | 电控组介绍、C语言及开发技巧  | [Lecture1.pptx](/files/meta-teaching/Lecture1.pptx) |
 | [Lecutre2](/posts/bd7db78/) | C语言编译原理         | [Lecture2.pptx](/files/meta-teaching/Lecture2.pptx) |
-| [Lecutre3](/posts/2e8f072/) | STM32介绍和工具链     | [Lecture3.pptx](/files/meta-teaching/Lecture3.pptx) |
-| [Lecture4](/posts/b1d97c9/) | STM32架构和原理      | [Lecture4.pptx](/files/meta-teaching/Lecture4.pptx) |
-| Lecture5                    | 中断和标准Hal库       |                                                     |
-| Lecture6                    | CAN通信和PID电机控制   |                                                     |
-| Lecture7                    | 同步和调度机制         |                                                     |
-| Lecture8                    | 实时操作系统ChibiOS   |                                                     |
-| Lecture9                    | C&#43;&#43;进阶，类和对象      |                                                     |
-| Lecture10                   | 战队代码架构          |                                                     |
-| Lecture11                   | 计算机视觉简介         |                                                     |
-| Lecture12                   | 线性代数和运动学解算      |
-| Lecture13                   | 机器人操作系统(ROS2)入门 |                                                     |
+| []() | STM32介绍和工具链     | []() |
+| []() | STM32架构和原理      | []() |
+| Lecture5 | 中断和标准Hal库       |                                               |
+| Lecture6 | CAN通信和PID电机控制   |                                               |
+| Lecture7 | 同步和调度机制         |                                               |
+| Lecture8 | 实时操作系统ChibiOS   |                                               |
+| Lecture9 | C&#43;&#43;进阶，类和对象      |                                               |
+| Lecture10 | 战队代码架构          |                                               |
+| Lecture11 | 计算机视觉简介         |                                               |
+| Lecture12 | 线性代数和运动学解算      |
+| Lecture13 | 机器人操作系统(ROS2)入门 |                                               |
 
 ---
 {.awesome-hr}
