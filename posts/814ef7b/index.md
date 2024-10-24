@@ -10,6 +10,8 @@
 \end{align*}
 {{&lt; /raw &gt;}}
 
+The key idea of behavioural cloning is to maximize such policy $\pi_{\theta}(\mathbf{a}|\mathbf{s})$ where $\mathbf{s}$ and $\mathbf{a}$ is
+the expert trajectory. 
 ### Action Chunking Transformer
 
 
