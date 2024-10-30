@@ -11,7 +11,7 @@
 
 Welcome to my personal website!
 
-My name is Feiyang Wu, currently a junior student majoring in Computer
+My name is Feiyang Wu, currently a senior student majoring in Computer
 Engineering of ZJU-UIUC institude of Zhejiang University (China). I am also 
 purchasing my second degree of University of Illinois Urbana Champaign (USA).
 I am expected to finish my bachelors&#39; degree in year 2025.

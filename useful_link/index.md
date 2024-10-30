@@ -18,7 +18,8 @@
 ### My Robotics Reseach :(fa-solid fa-robot):
 [Umi Leg](https://umi-on-legs.github.io/)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[Umi Gripper](https://umi-gripper.github.io/)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[ReKep](https://rekep-robot.github.io/)
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[Aloha](https://aloha-unleashed.github.io/) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; [Bimanual Imitation](https://github.com/ir-lab/bimanual-imitation)
-
+#### Paper Reading List
+* [Teaching Humanoid Robots Manipulation Skills through Single Video Imitation](https://arxiv.org/pdf/2410.11792)
 ### Useful Tools :(fa-solid fa-tools):
 * []()
 ![breif.png](/figures/brief.png)
