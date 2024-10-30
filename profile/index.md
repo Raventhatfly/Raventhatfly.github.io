@@ -48,11 +48,14 @@ I am expected to finish my bachelors&#39; degree in year 2025.
 # Standardized Assessment
 * TOEFL: 111 (Reading 30, Listening 30, Speaking 27, Writing 24)
 * GRE: 335&#43;3.5 (Verbal 165, Math 170)
-# Awards and Papers
+
+# Awards
 * 2021-2022 and 2022-2023 National Scholarship (国家奖学金)
 * 2021-2022 and 2022-2023, First Prize Scholarship of Zhejiang University (浙江大学一等奖学金)
 * 2021-2022 and 2022-2023, Second Prize Shcolarship of ZJU-UIUC institute (ZJUI联合学院二等奖学金)
 * 2023 RoboMaster University League (Shanghai Station) Second Prize (2023机甲大师高校联盟赛上海站二等奖)
+
+# Publication
 * Co-author of CVPR2024 accepted paper _MovieChat: From Dense Token to Sparse Memory for Long Video Understanding_, with the role of data collection and labeling.
 [View Paper](https://arxiv.org/abs/2307.16449)
 
