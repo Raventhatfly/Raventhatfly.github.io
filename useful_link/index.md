@@ -20,6 +20,7 @@
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[Aloha](https://aloha-unleashed.github.io/) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; [Bimanual Imitation](https://github.com/ir-lab/bimanual-imitation)
 #### Paper Reading List
 * [Teaching Humanoid Robots Manipulation Skills through Single Video Imitation](https://arxiv.org/pdf/2410.11792)
+* [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](https://hover-versatile-humanoid.github.io/)
 ### Useful Tools :(fa-solid fa-tools):
 * []()
 ![breif.png](/figures/brief.png)
